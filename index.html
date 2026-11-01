@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MaciTTY — a native SSH &amp; terminal client for macOS</title>
+<meta name="description" content="MaciTTY is a native macOS terminal client for SSH, Telnet, Rlogin and serial connections — saved sessions, keys, tunnels and deep customization. All data stays on your Mac.">
+<meta property="og:title" content="MaciTTY — the SSH client your Mac deserves">
+<meta property="og:description" content="A native macOS terminal client for SSH, Telnet, Rlogin and serial. All data stays on your Mac.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top"><span class="prompt">&gt;_</span> MaciTTY</a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-text">
+        <p class="badge">Native macOS · Free download</p>
+        <h1>The SSH client<br>your Mac deserves.</h1>
+        <p class="lede">
+          MaciTTY is a fast, native macOS terminal client for SSH, Telnet, Rlogin
+          and serial connections — saved sessions, key management, tunnels and
+          deep terminal customization in a modern Mac app.
+          <strong>All data stays on your Mac.</strong>
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="MaciTTY.zip">Download for macOS</a>
+        </div>
+        <p class="hero-note">Universal build — Apple&nbsp;Silicon&nbsp;+&nbsp;Intel · macOS&nbsp;14+ · free</p>
+      </div>
+
+      <figure class="shot">
+        <img src="screenshot.png" alt="MaciTTY terminal window connected to an Ubuntu server over SSH" width="691" height="434">
+        <figcaption>A live SSH session in MaciTTY</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="section">
+    <div class="wrap">
+      <h2 class="section-title">Already in your terminal</h2>
+      <p class="section-sub">Everything below is implemented and shipping today.</p>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>Session manager</h3>
+          <p>Saved sessions organized in folders, a Default Settings profile everything
+          inherits from, quick connect (<code>user@host:port</code>, <code>ssh://…</code>),
+          search, and native macOS tabs and windows.</p>
+        </div>
+
+        <div class="card">
+          <h3>Keys &amp; authentication</h3>
+          <p>Every way in: password, keyboard-interactive, public keys
+          (<code>.ppk</code> and OpenSSH formats), ssh-agent, certificates
+          and Kerberos/GSSAPI — with per-session flexibility.</p>
+        </div>
+
+        <div class="card">
+          <h3>Every protocol</h3>
+          <p>Secure SSH connections, plus Telnet, Rlogin, Raw TCP and Serial
+          for network gear, embedded boards and legacy systems.</p>
+        </div>
+
+        <div class="card">
+          <h3>Tunnels &amp; forwarding</h3>
+          <p>Local, remote and dynamic (SOCKS) port forwarding you can edit
+          live mid-session, X11 forwarding, agent forwarding and
+          connection sharing.</p>
+        </div>
+
+        <div class="card">
+          <h3>Proxies &amp; jump hosts</h3>
+          <p>Reach hosts through HTTP CONNECT, SOCKS&nbsp;4/5, Telnet commands,
+          local commands or another SSH host — with exclusion lists
+          and DNS handled at the proxy.</p>
+        </div>
+
+        <div class="card">
+          <h3>Deep terminal customization</h3>
+          <p>Colours and palette editor, cursor styles, bells and Dock alerts,
+          keyboard modes, mouse &amp; selection behaviour, 25 legacy charsets,
+          window size and behaviour — tune the terminal to how you work.</p>
+        </div>
+
+        <div class="card">
+          <h3>Advanced SSH control</h3>
+          <p>Fine-tune key exchange, cipher and host-key preference lists,
+          rekey limits, compression and keepalives, pin manual host keys,
+          run a remote command or connect without a shell — including
+          workarounds for quirky servers.</p>
+        </div>
+
+        <div class="card">
+          <h3>Security &amp; privacy</h3>
+          <p>Save passwords and key passphrases in the macOS Keychain, unlocked
+          with Touch ID. Host-key verification on every new server. Each session
+          runs in its own isolated process. No accounts, no telemetry —
+          files stay locked down on disk.</p>
+        </div>
+
+        <div class="card">
+          <h3>Imports your <code>~/.ssh/config</code></h3>
+          <p>Every <code>Host</code> becomes a saved session — includes,
+          jump hosts, forwardings and identity files carried over,
+          with a preview before anything is written.</p>
+        </div>
+
+        <div class="card">
+          <h3>Session logging</h3>
+          <p>Record printable output, everything, protocol packets or raw data —
+          with timestamped filename placeholders and append/overwrite/ask control.</p>
+        </div>
+
+        <div class="card">
+          <h3>Scriptable launch</h3>
+          <p>Open sessions straight from the command line or scripts —
+          <code>open -a MaciTTY --args -ssh -P 2222 -L 8080:web:80 user@host</code>
+          — with support for saved sessions, keys, tunnels and serial parameters.</p>
+        </div>
+
+        <div class="card">
+          <h3>Speaks your language</h3>
+          <p>Fully localized in English, German, Russian and Spanish
+          from day one — menus, dialogs and settings included.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section id="roadmap" class="section section-alt">
+    <div class="wrap">
+      <h2 class="section-title">On the roadmap</h2>
+      <p class="section-sub">MaciTTY is actively developed. Coming next:</p>
+
+      <div class="grid">
+
+        <div class="card card-next">
+          <h3>Key manager <span class="tag">planned</span></h3>
+          <p>Generate RSA, ECDSA, Ed25519 and Ed448 keys right in the app,
+          convert between formats, inspect fingerprints and comments,
+          and manage certificates — no external tools needed.</p>
+        </div>
+
+        <div class="card card-next">
+          <h3>Built-in SSH agent <span class="tag">planned</span></h3>
+          <p>A menu-bar agent that holds your keys and serves them to MaciTTY,
+          git, Terminal and every other app via <code>SSH_AUTH_SOCK</code> —
+          with an optional confirm-on-use prompt.</p>
+        </div>
+
+        <div class="card card-next">
+          <h3>SFTP file transfer <span class="tag">planned</span></h3>
+          <p>A graphical file browser for your servers — upload, download,
+          drag &amp; drop, rename, permissions — plus command-line tools
+          for scripting and automation.</p>
+        </div>
+
+        <div class="card card-next">
+          <h3>Easy migration <span class="tag">planned</span></h3>
+          <p>Bring your existing setup with you: import saved sessions and
+          host keys from other clients, plus an encrypted backup/restore
+          for your whole library.</p>
+        </div>
+
+        <div class="card card-next">
+          <h3>App lock <span class="tag">in review</span></h3>
+          <p>Lock the whole app behind Touch ID or your login password —
+          on launch, after idle, on sleep, or instantly with <code>⌃⌘L</code> —
+          while your sessions keep running underneath.</p>
+        </div>
+
+        <div class="card card-next">
+          <h3>The road to 1.0 <span class="tag">planned</span></h3>
+          <p>Developer ID signing and notarization for a smoother first launch,
+          a polished installer, accessibility passes, performance tuning
+          and opt-in update checks.</p>
+        </div>
+
+      </div>
+
+      <div class="more">
+        <h3>And more after that.</h3>
+        <p>New features land regularly — the roadmap above is just what's next.
+        Check back here for updates and fresh builds.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD CTA -->
+  <section id="download" class="section cta">
+    <div class="wrap cta-inner">
+      <h2>Take it for a spin.</h2>
+      <p>Grab the latest build — free, universal, no account required.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="MaciTTY.zip">Download latest build</a>
+      </div>
+      <p class="cta-note">The build is currently ad-hoc signed — on first launch,
+      right-click the app and choose <strong>Open</strong>, or run
+      <code>xattr -dr com.apple.quarantine MaciTTY.app</code>.
+      Proper signing and notarization are on the roadmap.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span class="brand"><span class="prompt">&gt;_</span> MaciTTY</span>
+    <p>Includes technology from the PuTTY project, © 1997–2026 Simon Tatham, MIT licence.</p>
+  </div>
+</footer>
+
+</body>
+</html>
