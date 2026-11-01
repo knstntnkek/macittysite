@@ -126,6 +126,7 @@ a:hover { text-decoration: underline; }
   border-top: 1px solid var(--border);
   text-align: center;
 }
+.shot-wide { max-width: 760px; margin: 0 auto 48px; }
 
 /* ---------- sections ---------- */
 .section { padding: 88px 0; }
