@@ -17,8 +17,8 @@
   <div class="wrap nav-inner">
     <a class="brand" href="#top"><span class="prompt">&gt;_</span> MaciTTY</a>
     <nav>
+      <a href="#screenshots">Screenshots</a>
       <a href="#features">Features</a>
-      <a href="#roadmap">Roadmap</a>
       <a href="#download">Download</a>
     </nav>
   </div>
@@ -34,8 +34,8 @@
         <h1>The SSH client<br>your Mac deserves.</h1>
         <p class="lede">
           MaciTTY is a fast, native macOS terminal client for SSH, Telnet, Rlogin
-          and serial connections — saved sessions, key management, tunnels and
-          deep terminal customization in a modern Mac app.
+          and serial connections — saved sessions, keys, tunnels, file transfer
+          and deep customization in a modern Mac app.
           <strong>All data stays on your Mac.</strong>
         </p>
         <div class="hero-actions">
@@ -45,9 +45,37 @@
       </div>
 
       <figure class="shot">
-        <img src="screenshot.png" alt="MaciTTY terminal window connected to an Ubuntu server over SSH" width="691" height="434">
-        <figcaption>A live SSH session in MaciTTY</figcaption>
+        <img src="screenshot-terminal.png" alt="MaciTTY main window with an embedded terminal connected to an Ubuntu server over SSH" width="1024" height="690">
+        <figcaption>Live SSH session, embedded in the main window</figcaption>
       </figure>
+    </div>
+  </section>
+
+  <!-- SCREENSHOTS -->
+  <section id="screenshots" class="section section-alt">
+    <div class="wrap">
+      <h2 class="section-title">See it in action</h2>
+      <p class="section-sub">Sessions, terminal and file transfer — all in one window.</p>
+
+      <div class="carousel" id="carousel">
+        <div class="carousel-track">
+          <figure class="slide">
+            <img src="screenshot-terminal.png" alt="Embedded terminal showing a live SSH session" width="1024" height="690">
+            <figcaption>Terminal — a live SSH session, embedded in the main window</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="screenshot-sftp.png" alt="Dual-pane SFTP file browser with local and remote listings" width="1024" height="690">
+            <figcaption>Files — dual-pane SFTP browser with drag &amp; drop</figcaption>
+          </figure>
+          <figure class="slide">
+            <img src="screenshot-settings.png" alt="Session library with folders and per-session settings editor" width="1024" height="690">
+            <figcaption>Settings — every option a connection needs</figcaption>
+          </figure>
+        </div>
+        <button class="car-btn prev" aria-label="Previous screenshot">&#8249;</button>
+        <button class="car-btn next" aria-label="Next screenshot">&#8250;</button>
+        <div class="car-dots" role="tablist"></div>
+      </div>
     </div>
   </section>
 
@@ -57,18 +85,13 @@
       <h2 class="section-title">Already in your terminal</h2>
       <p class="section-sub">Everything below is implemented and shipping today.</p>
 
-      <figure class="shot shot-wide">
-        <img src="screenshot-library.png" alt="MaciTTY main window: session library with folders and per-session settings" width="734" height="517">
-        <figcaption>Saved sessions in folders, with every setting a connection needs</figcaption>
-      </figure>
-
       <div class="grid">
 
         <div class="card">
           <h3>Session manager</h3>
           <p>Saved sessions organized in folders, a Default Settings profile everything
           inherits from, quick connect (<code>user@host:port</code>, <code>ssh://…</code>),
-          search, and native macOS tabs and windows.</p>
+          search — and all your live connections embedded in one tidy window.</p>
         </div>
 
         <div class="card">
@@ -99,10 +122,10 @@
         </div>
 
         <div class="card">
-          <h3>Deep terminal customization</h3>
+          <h3>Deep customization</h3>
           <p>Colours and palette editor, cursor styles, bells and Dock alerts,
           keyboard modes, mouse &amp; selection behaviour, 25 legacy charsets,
-          window size and behaviour — tune the terminal to how you work.</p>
+          light/dark/system themes — tune the terminal to how you work.</p>
         </div>
 
         <div class="card">
@@ -116,9 +139,18 @@
         <div class="card">
           <h3>Security &amp; privacy</h3>
           <p>Save passwords and key passphrases in the macOS Keychain, unlocked
-          with Touch ID. Host-key verification on every new server. Each session
-          runs in its own isolated process. No accounts, no telemetry —
+          with Touch ID — and lock the whole app the same way on launch, idle
+          or sleep while sessions keep running. Host-key verification on every
+          new server, one isolated process per session, no telemetry —
           files stay locked down on disk.</p>
+        </div>
+
+        <div class="card">
+          <h3>SFTP file browser</h3>
+          <p>Browse local and remote files side by side — drag &amp; drop transfers
+          with progress, recursive folders, mkdir/rename/delete. Double-click a
+          remote file to edit it in your favourite local editor; every save
+          uploads back, with conflict detection if it changed on the server.</p>
         </div>
 
         <div class="card">
@@ -151,61 +183,12 @@
     </div>
   </section>
 
-  <!-- ROADMAP -->
-  <section id="roadmap" class="section section-alt">
+  <!-- MORE -->
+  <section class="section section-alt">
     <div class="wrap">
-      <h2 class="section-title">On the roadmap</h2>
-      <p class="section-sub">MaciTTY is actively developed. Coming next:</p>
-
-      <div class="grid">
-
-        <div class="card card-next">
-          <h3>Key manager <span class="tag">planned</span></h3>
-          <p>Generate RSA, ECDSA, Ed25519 and Ed448 keys right in the app,
-          convert between formats, inspect fingerprints and comments,
-          and manage certificates — no external tools needed.</p>
-        </div>
-
-        <div class="card card-next">
-          <h3>Built-in SSH agent <span class="tag">planned</span></h3>
-          <p>A menu-bar agent that holds your keys and serves them to MaciTTY,
-          git, Terminal and every other app via <code>SSH_AUTH_SOCK</code> —
-          with an optional confirm-on-use prompt.</p>
-        </div>
-
-        <div class="card card-next">
-          <h3>SFTP file transfer <span class="tag">planned</span></h3>
-          <p>A graphical file browser for your servers — upload, download,
-          drag &amp; drop, rename, permissions — plus command-line tools
-          for scripting and automation.</p>
-        </div>
-
-        <div class="card card-next">
-          <h3>Easy migration <span class="tag">planned</span></h3>
-          <p>Bring your existing setup with you: import saved sessions and
-          host keys from other clients, plus an encrypted backup/restore
-          for your whole library.</p>
-        </div>
-
-        <div class="card card-next">
-          <h3>App lock <span class="tag">in review</span></h3>
-          <p>Lock the whole app behind Touch ID or your login password —
-          on launch, after idle, on sleep, or instantly with <code>⌃⌘L</code> —
-          while your sessions keep running underneath.</p>
-        </div>
-
-        <div class="card card-next">
-          <h3>The road to 1.0 <span class="tag">planned</span></h3>
-          <p>Developer ID signing and notarization for a smoother first launch,
-          a polished installer, accessibility passes, performance tuning
-          and opt-in update checks.</p>
-        </div>
-
-      </div>
-
       <div class="more">
-        <h3>And more after that.</h3>
-        <p>New features land regularly — the roadmap above is just what's next.
+        <h3>More features are coming.</h3>
+        <p>MaciTTY is actively developed — new capabilities land regularly.
         Check back here for updates and fresh builds.</p>
       </div>
     </div>
@@ -222,7 +205,7 @@
       <p class="cta-note">The build is currently ad-hoc signed — on first launch,
       right-click the app and choose <strong>Open</strong>, or run
       <code>xattr -dr com.apple.quarantine MaciTTY.app</code>.
-      Proper signing and notarization are on the roadmap.</p>
+      Proper signing and notarization are coming.</p>
     </div>
   </section>
 
@@ -235,5 +218,6 @@
   </div>
 </footer>
 
+<script src="site.js"></script>
 </body>
 </html>

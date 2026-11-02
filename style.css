@@ -7,7 +7,6 @@
   --text-dim: #9ca3af;
   --accent: #35d399;
   --accent-dim: #1f8a66;
-  --amber: #fbbf24;
   --mono: "SF Mono", ui-monospace, Menlo, Consolas, monospace;
 }
 
@@ -128,6 +127,73 @@ a:hover { text-decoration: underline; }
 }
 .shot-wide { max-width: 760px; margin: 0 auto 48px; }
 
+/* ---------- carousel ---------- */
+.carousel {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  background: #000;
+}
+.carousel-track::-webkit-scrollbar { display: none; }
+.slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+}
+.slide img { display: block; width: 100%; height: auto; }
+.slide figcaption {
+  padding: 12px 16px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  color: var(--text-dim);
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+.car-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: rgba(17, 24, 39, 0.85);
+  color: var(--text);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: border-color 0.15s, color 0.15s;
+}
+.car-btn:hover { border-color: var(--accent); color: var(--accent); }
+.car-btn.prev { left: 12px; }
+.car-btn.next { right: 12px; }
+.car-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+.car-dot {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  border: none;
+  background: var(--border);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.15s, transform 0.15s;
+}
+.car-dot:hover { background: var(--text-dim); }
+.car-dot.on { background: var(--accent); transform: scale(1.2); }
+
 /* ---------- sections ---------- */
 .section { padding: 88px 0; }
 .section-alt { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
@@ -154,24 +220,7 @@ a:hover { text-decoration: underline; }
 .card h3 { font-size: 17.5px; margin-bottom: 10px; letter-spacing: -0.01em; }
 .card p { font-size: 14.5px; color: var(--text-dim); }
 
-.tag {
-  display: inline-block;
-  vertical-align: 2px;
-  margin-left: 6px;
-  font-family: var(--mono);
-  font-size: 10.5px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--amber);
-  border: 1px solid rgba(251, 191, 36, 0.35);
-  border-radius: 999px;
-  padding: 2px 9px;
-}
-.card-next:hover { border-color: rgba(251, 191, 36, 0.35); }
-
 .more {
-  margin-top: 56px;
   text-align: center;
   padding: 44px 24px;
   border: 1px dashed var(--border);
