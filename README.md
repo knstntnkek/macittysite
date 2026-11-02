@@ -22,11 +22,11 @@ Plain HTML/CSS — no build step.
 
 ## Shipping a build
 
-The download button points at `MaciTTY.zip` in the site root — drop the zipped
-app next to `index.html` before pushing (or update the `href` to wherever you
-host it). Note GitHub has a 100 MB per-file limit; the current zip is ~4 MB.
+The download button points at `MaciTTY-latest.dmg` in the site root — drop the
+DMG next to `index.html` before pushing (or update the `href` to wherever you
+host it). Note GitHub has a 100 MB per-file limit.
 
 ## Updating for a new release
 
-Replace `MaciTTY.zip`. If you version the filename (e.g. `MaciTTY-0.2.zip`),
+Replace `MaciTTY-latest.dmg`. If you version the filename (e.g. `MaciTTY-0.2.dmg`),
 update both `href`s in `index.html`.
