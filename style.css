@@ -46,7 +46,12 @@ a:hover { text-decoration: underline; }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 60px; }
 .brand { font-weight: 700; font-size: 18px; color: var(--text); }
 .brand:hover { text-decoration: none; }
-.prompt { font-family: var(--mono); color: var(--accent); font-weight: 700; }
+.brand-icon {
+  width: 24px; height: 24px;
+  border-radius: 6px;
+  vertical-align: -5px;
+  margin-right: 7px;
+}
 .nav nav { display: flex; gap: 28px; }
 .nav nav a { color: var(--text-dim); font-size: 15px; }
 .nav nav a:hover { color: var(--text); text-decoration: none; }
@@ -255,6 +260,43 @@ a:hover { text-decoration: underline; }
 }
 .footer nav { display: flex; gap: 22px; }
 .footer .brand { font-size: 15px; }
+
+/* ---------- easter egg mascot ---------- */
+.mascot {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  width: 52px; height: 52px;
+  border-radius: 13px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  z-index: 30;
+  transition: transform 0.15s ease;
+}
+.mascot:hover { transform: scale(1.1) rotate(-4deg); }
+.mascot.hop { animation: hop 0.45s ease; }
+@keyframes hop {
+  30% { transform: translateY(-14px) rotate(-6deg); }
+  60% { transform: translateY(2px); }
+}
+.mascot-bubble {
+  position: fixed;
+  right: 86px;
+  bottom: 34px;
+  font: 12px var(--mono);
+  color: var(--accent);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 7px 11px;
+  white-space: pre;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 30;
+  pointer-events: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+.mascot-bubble.show { opacity: 1; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 860px) {
