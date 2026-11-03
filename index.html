@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MaciTTY — a native SSH &amp; terminal client for macOS</title>
-<meta name="description" content="MaciTTY is a native macOS terminal client for SSH, Telnet, Rlogin and serial connections — saved sessions, keys, tunnels and deep customization. All data stays on your Mac.">
+<meta name="description" content="MaciTTY is a native macOS terminal client for SSH, Telnet, Rlogin and serial connections — saved sessions, keys, tunnels, file transfer and optional iCloud sync. No telemetry, no accounts: all data stays on your Mac.">
 <meta property="og:title" content="MaciTTY — the SSH client your Mac deserves">
-<meta property="og:description" content="A native macOS terminal client for SSH, Telnet, Rlogin and serial. All data stays on your Mac.">
+<meta property="og:description" content="A native macOS terminal client for SSH, Telnet, Rlogin and serial. No telemetry, no accounts — all data stays on your Mac.">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/png" href="icon.png">
 <link rel="apple-touch-icon" href="icon.png">
@@ -20,6 +20,7 @@
     <nav>
       <a href="#screenshots">Screenshots</a>
       <a href="#features">Features</a>
+      <a href="#privacy">Privacy</a>
       <a href="#download">Download</a>
     </nav>
   </div>
@@ -37,7 +38,7 @@
           MaciTTY is a fast, native macOS terminal client for SSH, Telnet, Rlogin
           and serial connections — saved sessions, keys, tunnels, file transfer
           and deep customization in a modern Mac app.
-          <strong>All data stays on your Mac.</strong>
+          <strong>No telemetry, no accounts — all data stays on your Mac.</strong>
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="MaciTTY-latest.dmg">Download for macOS</a>
@@ -90,9 +91,9 @@
 
         <div class="card">
           <h3>Session manager</h3>
-          <p>Saved sessions organized in folders, a Default Settings profile everything
-          inherits from, quick connect (<code>user@host:port</code>, <code>ssh://…</code>),
-          search — and all your live connections embedded in one tidy window.</p>
+          <p>Saved sessions in folders, a Default Settings profile everything inherits,
+          quick connect (<code>user@host</code>, <code>ssh://…</code>) and search —
+          with live connections embedded in one window and instant switching.</p>
         </div>
 
         <div class="card">
@@ -110,48 +111,45 @@
 
         <div class="card">
           <h3>Tunnels &amp; forwarding</h3>
-          <p>Local, remote and dynamic (SOCKS) port forwarding you can edit
-          live mid-session, X11 forwarding, agent forwarding and
+          <p>Local, remote and dynamic (SOCKS) port forwarding, editable
+          live mid-session — plus X11 and agent forwarding and
           connection sharing.</p>
         </div>
 
         <div class="card">
           <h3>Proxies &amp; jump hosts</h3>
-          <p>Reach hosts through HTTP CONNECT, SOCKS&nbsp;4/5, Telnet commands,
-          local commands or another SSH host — with exclusion lists
-          and DNS handled at the proxy.</p>
+          <p>Reach hosts through HTTP CONNECT, SOCKS&nbsp;4/5, Telnet or local
+          commands — or hop through another SSH host, with DNS resolved
+          at the proxy.</p>
         </div>
 
         <div class="card">
-          <h3>Deep customization</h3>
+          <h3>Terminal your way</h3>
           <p>Colours and palette editor, cursor styles, bells and Dock alerts,
-          keyboard modes, mouse &amp; selection behaviour, 25 legacy charsets,
-          light/dark/system themes — tune the terminal to how you work.</p>
+          keyboard modes, 25 legacy charsets, light/dark/system themes —
+          and four app icons to pick from.</p>
         </div>
 
         <div class="card">
           <h3>Advanced SSH control</h3>
-          <p>Fine-tune key exchange, cipher and host-key preference lists,
-          rekey limits, compression and keepalives, pin manual host keys,
-          run a remote command or connect without a shell — including
+          <p>Tune key exchange, cipher and host-key preferences, rekey limits,
+          compression and keepalives, pin host keys manually — including
           workarounds for quirky servers.</p>
         </div>
 
         <div class="card">
-          <h3>Security &amp; privacy</h3>
-          <p>Save passwords and key passphrases in the macOS Keychain, unlocked
-          with Touch ID — and lock the whole app the same way on launch, idle
-          or sleep while sessions keep running. Host-key verification on every
-          new server, one isolated process per session, no telemetry —
-          files stay locked down on disk.</p>
+          <h3>SFTP file browser</h3>
+          <p>Local and remote files side by side — drag &amp; drop or toolbar
+          actions on either pane, recursive transfers with progress. Edit a
+          remote file in your favourite local editor; saves upload back,
+          with conflict detection.</p>
         </div>
 
         <div class="card">
-          <h3>SFTP file browser</h3>
-          <p>Browse local and remote files side by side — drag &amp; drop transfers
-          with progress, recursive folders, mkdir/rename/delete. Double-click a
-          remote file to edit it in your favourite local editor; every save
-          uploads back, with conflict detection if it changed on the server.</p>
+          <h3>Syncs across your Macs</h3>
+          <p>Optional iCloud sync carries your sessions and settings to your
+          other Macs through your own private iCloud — credentials are
+          never synced, so secrets stay in each Mac's Keychain.</p>
         </div>
 
         <div class="card">
@@ -176,21 +174,39 @@
 
         <div class="card">
           <h3>Speaks your language</h3>
-          <p>Fully localized in English, German, Russian and Spanish
-          from day one — menus, dialogs and settings included.</p>
+          <p>Fully localized in English, German, Russian and Spanish —
+          pick your language right in settings.</p>
         </div>
 
       </div>
     </div>
   </section>
 
+  <!-- PRIVACY -->
+  <section id="privacy" class="section section-alt">
+    <div class="wrap">
+      <h2 class="section-title">Private by design</h2>
+      <p class="section-sub">No accounts, no telemetry, no analytics — and no cloud of ours, because there isn't one.</p>
+
+      <div class="privacy-panel">
+        <ul class="privacy-list">
+          <li><strong>Your data lives on your Mac</strong> — sessions, settings and files stay on local disk.</li>
+          <li><strong>Secrets stay in the Keychain</strong> — passwords and passphrases behind Touch ID, and one click forgets them all.</li>
+          <li><strong>Lock the app, not the work</strong> — app lock on launch, idle or sleep while sessions keep running.</li>
+          <li><strong>Sync that's still yours</strong> — optional iCloud sync uses your private iCloud; credentials are never included.</li>
+          <li><strong>Trust, verified</strong> — host-key checks on every new server, one isolated process per session.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <!-- MORE -->
-  <section class="section section-alt">
+  <section class="section">
     <div class="wrap">
       <div class="more">
         <h3>More features are coming.</h3>
-        <p>MaciTTY is actively developed — new capabilities land regularly.
-        Check back here for updates and fresh builds.</p>
+        <p>MaciTTY is actively developed — and it keeps itself updated,
+        so new builds find you automatically.</p>
       </div>
     </div>
   </section>
@@ -203,7 +219,7 @@
       <div class="hero-actions">
         <a class="btn btn-primary" href="MaciTTY-latest.dmg">Download latest build</a>
       </div>
-      <p class="cta-note">Signed and notarized by Apple — open the DMG and drag MaciTTY to Applications.</p>
+      <p class="cta-note">v0.5.1 · signed and notarized by Apple — open the DMG and drag MaciTTY to Applications. The app checks for updates itself, so you'll always be on the latest build.</p>
     </div>
   </section>
 
