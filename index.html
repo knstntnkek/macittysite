@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MaciTTY — a native SSH &amp; terminal client for macOS</title>
-<meta name="description" content="MaciTTY is a native macOS terminal client for SSH, Telnet, Rlogin and serial connections — saved sessions, keys, tunnels, file transfer and optional iCloud sync. No telemetry, no accounts: all data stays on your Mac.">
+<meta name="description" content="MaciTTY is a native macOS terminal client for SSH, Telnet, Rlogin and serial — saved sessions in folders, stored credentials, one-click connect, built-in SFTP and optional iCloud sync. Free, no account, no subscription, no telemetry.">
 <meta property="og:title" content="MaciTTY — the SSH client your Mac deserves">
 <meta property="og:description" content="A native macOS terminal client for SSH, Telnet, Rlogin and serial. No telemetry, no accounts — all data stays on your Mac.">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/png" href="icon.png">
 <link rel="apple-touch-icon" href="icon.png">
-<link rel="stylesheet" href="style.css?v=20261103">
+<link rel="stylesheet" href="style.css?v=20261103-3">
 </head>
 <body>
 
@@ -18,10 +18,10 @@
   <div class="wrap nav-inner">
     <a class="brand" href="#top"><img class="brand-icon" src="icon.png" alt="MaciTTY app icon"> MaciTTY</a>
     <nav>
+      <a href="#why">Why MaciTTY</a>
       <a href="#screenshots">Screenshots</a>
       <a href="#features">Features</a>
       <a href="#privacy">Privacy</a>
-      <a href="changelog.html">Changelog</a>
       <a href="#download">Download</a>
     </nav>
   </div>
@@ -33,24 +33,75 @@
   <section class="hero">
     <div class="wrap hero-inner">
       <div class="hero-text">
-        <p class="badge">Native macOS · Free download</p>
+        <p class="badge">Native macOS · Free</p>
         <h1>The SSH client<br>your Mac deserves.</h1>
         <p class="lede">
-          MaciTTY is a fast, native macOS terminal client for SSH, Telnet, Rlogin
-          and serial connections — saved sessions, keys, tunnels, file transfer
-          and deep customization in a modern Mac app.
-          <strong>No telemetry, no accounts — all data stays on your Mac.</strong>
+          Saved sessions in folders, credentials in your Keychain, one-click
+          connect, file transfer built in — a fast, native macOS client for
+          SSH, Telnet, Rlogin and serial.
+          <strong>Free, no account, no subscription, no telemetry.</strong>
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="MaciTTY-latest.dmg">Download for macOS</a>
         </div>
-        <p class="hero-note">Universal build — Apple&nbsp;Silicon&nbsp;+&nbsp;Intel · macOS&nbsp;14+ · free · signed &amp; notarized</p>
+        <p class="hero-note">Universal build — Apple&nbsp;Silicon&nbsp;+&nbsp;Intel · macOS&nbsp;14+ · signed &amp; notarized</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAINS -->
+  <section id="why" class="section section-alt">
+    <div class="wrap">
+      <h2 class="section-title">Sound familiar?</h2>
+
+      <div class="pain-grid">
+
+        <div class="pain-card">
+          <p class="pain">"There's no PuTTY for Mac — I just want my saved sessions back."</p>
+          <p class="fix"><strong>The session manager you miss.</strong> Saved sessions
+          in folders, stored credentials, inherited defaults, one-click connect —
+          rebuilt as a real Mac app.</p>
+        </div>
+
+        <div class="pain-card">
+          <p class="pain">"$120 a year — for an SSH client?"</p>
+          <p class="fix"><strong>Free. Really.</strong> No account needed,
+          no expiring trial.</p>
+        </div>
+
+        <div class="pain-card">
+          <p class="pain">"I type the same password twenty times a day."</p>
+          <p class="fix"><strong>Type it once.</strong> MaciTTY spots the login
+          prompt and offers to save it in your Keychain behind Touch ID —
+          every login after that is automatic.</p>
+        </div>
+
+        <div class="pain-card">
+          <p class="pain">"SSH in one app, file transfer in another — credentials in both."</p>
+          <p class="fix"><strong>Files included.</strong> A dual-pane SFTP browser
+          in the same window, on the same connection — drag &amp; drop transfers
+          and remote files editable in your local editor.</p>
+        </div>
+
+        <div class="pain-card">
+          <p class="pain">"Electron SSH apps beach-ball on large output."</p>
+          <p class="fix"><strong>Native speed.</strong> A real Mac UI over a fast
+          C engine — instant session switching, no Electron anywhere.</p>
+        </div>
+
+        <div class="pain-card">
+          <p class="pain">"Sync my sessions? Only behind your subscription."</p>
+          <p class="fix"><strong>Your sync, your cloud.</strong> Optional iCloud
+          sync uses your own private iCloud — no account with us, and
+          credentials are never synced.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- SCREENSHOTS -->
-  <section id="screenshots" class="section section-alt">
+  <section id="screenshots" class="section">
     <div class="wrap">
       <h2 class="section-title">See it in action</h2>
       <p class="section-sub">Sessions, terminal and file transfer — all in one window.</p>
@@ -80,7 +131,7 @@
   <!-- FEATURES -->
   <section id="features" class="section">
     <div class="wrap">
-      <h2 class="section-title">Already in your terminal</h2>
+      <h2 class="section-title">The complete toolkit</h2>
       <p class="section-sub">Everything below is implemented and shipping today.</p>
 
       <div class="grid">
@@ -96,7 +147,23 @@
           <h3>Keys &amp; authentication</h3>
           <p>Every way in: password, keyboard-interactive, public keys
           (<code>.ppk</code> and OpenSSH formats), ssh-agent, certificates
-          and Kerberos/GSSAPI — with per-session flexibility.</p>
+          and Kerberos/GSSAPI — and a password typed at the prompt can be
+          saved to the Keychain on the spot.</p>
+        </div>
+
+        <div class="card">
+          <h3>SFTP file browser</h3>
+          <p>Local and remote files side by side — drag &amp; drop or toolbar
+          actions on either pane, recursive transfers with progress. Edit a
+          remote file in your favourite local editor; saves upload back,
+          with conflict detection.</p>
+        </div>
+
+        <div class="card">
+          <h3>Syncs across your Macs</h3>
+          <p>Optional iCloud sync carries your sessions and settings to your
+          other Macs through your own private iCloud — credentials are
+          never synced, so secrets stay in each Mac's Keychain.</p>
         </div>
 
         <div class="card">
@@ -131,21 +198,6 @@
           <p>Tune key exchange, cipher and host-key preferences, rekey limits,
           compression and keepalives, pin host keys manually — including
           workarounds for quirky servers.</p>
-        </div>
-
-        <div class="card">
-          <h3>SFTP file browser</h3>
-          <p>Local and remote files side by side — drag &amp; drop or toolbar
-          actions on either pane, recursive transfers with progress. Edit a
-          remote file in your favourite local editor; saves upload back,
-          with conflict detection.</p>
-        </div>
-
-        <div class="card">
-          <h3>Syncs across your Macs</h3>
-          <p>Optional iCloud sync carries your sessions and settings to your
-          other Macs through your own private iCloud — credentials are
-          never synced, so secrets stay in each Mac's Keychain.</p>
         </div>
 
         <div class="card">
@@ -212,7 +264,7 @@
   <section id="download" class="section cta">
     <div class="wrap cta-inner">
       <h2>Take it for a spin.</h2>
-      <p>Grab the latest build — free, universal, no account required.</p>
+      <p>Grab the latest build — free, universal, no account or subscription.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="MaciTTY-latest.dmg">Download latest build</a>
       </div>
@@ -229,6 +281,6 @@
   </div>
 </footer>
 
-<script src="site.js?v=20261103"></script>
+<script src="site.js?v=20261103-3"></script>
 </body>
 </html>
