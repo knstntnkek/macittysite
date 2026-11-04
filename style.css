@@ -65,11 +65,12 @@ a:hover { text-decoration: underline; }
     var(--bg);
 }
 .hero-inner {
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: 56px;
-  align-items: center;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
 }
+.hero-inner .hero-actions { justify-content: center; }
+.hero-inner .lede { margin-left: auto; margin-right: auto; }
 .badge {
   display: inline-block;
   font-family: var(--mono);
@@ -111,26 +112,6 @@ a:hover { text-decoration: underline; }
 }
 .btn-ghost:hover { border-color: var(--text-dim); }
 .hero-note { margin-top: 18px; font-size: 13.5px; color: var(--text-dim); font-family: var(--mono); }
-
-/* ---------- app screenshot ---------- */
-.shot {
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
-  background: #000;
-}
-.shot img { display: block; width: 100%; height: auto; }
-.shot figcaption {
-  padding: 10px 16px;
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--text-dim);
-  background: var(--card);
-  border-top: 1px solid var(--border);
-  text-align: center;
-}
-.shot-wide { max-width: 760px; margin: 0 auto 48px; }
 
 /* ---------- carousel ---------- */
 .carousel {
@@ -263,6 +244,46 @@ a:hover { text-decoration: underline; }
 .more h3 { font-size: 24px; margin-bottom: 10px; letter-spacing: -0.01em; }
 .more p { color: var(--text-dim); max-width: 60ch; margin: 0 auto; }
 
+/* ---------- changelog ---------- */
+.release {
+  max-width: 720px;
+  margin: 44px auto 56px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px 34px 16px;
+}
+.release-head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+.release-head h2 { font-size: 22px; letter-spacing: -0.01em; }
+.release-date {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  color: var(--text-dim);
+}
+.release-list { list-style: none; }
+.release-list li {
+  position: relative;
+  padding: 7px 0 7px 26px;
+  font-size: 15px;
+  color: var(--text-dim);
+}
+.release-list li::before {
+  content: "›";
+  position: absolute;
+  left: 4px;
+  color: var(--accent);
+  font-weight: 700;
+}
+.release-list strong { color: var(--text); font-weight: 600; }
+
 /* ---------- CTA ---------- */
 .cta { text-align: center; }
 .cta-inner { max-width: 640px; }
@@ -328,7 +349,6 @@ a:hover { text-decoration: underline; }
 /* ---------- responsive ---------- */
 @media (max-width: 860px) {
   .hero { padding: 64px 0 56px; }
-  .hero-inner { grid-template-columns: 1fr; gap: 44px; }
   .nav nav { gap: 18px; }
   .nav nav a { font-size: 14px; }
 }
