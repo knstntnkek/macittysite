@@ -43,8 +43,8 @@ a:hover { text-decoration: underline; }
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
-.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 60px; }
-.brand { font-weight: 700; font-size: 18px; color: var(--text); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 16px; }
+.brand { font-weight: 700; font-size: 18px; color: var(--text); white-space: nowrap; flex-shrink: 0; }
 .brand:hover { text-decoration: none; }
 .brand-icon {
   width: 24px; height: 24px;
@@ -52,8 +52,16 @@ a:hover { text-decoration: underline; }
   vertical-align: -5px;
   margin-right: 7px;
 }
-.nav nav { display: flex; gap: 28px; }
-.nav nav a { color: var(--text-dim); font-size: 15px; }
+.nav nav {
+  display: flex;
+  gap: 28px;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.nav nav::-webkit-scrollbar { display: none; }
+.nav nav a { color: var(--text-dim); font-size: 15px; white-space: nowrap; flex-shrink: 0; }
 .nav nav a:hover { color: var(--text); text-decoration: none; }
 .gh-link { font-weight: 600; }
 
@@ -244,6 +252,29 @@ a:hover { text-decoration: underline; }
 .more h3 { font-size: 24px; margin-bottom: 10px; letter-spacing: -0.01em; }
 .more p { color: var(--text-dim); max-width: 60ch; margin: 0 auto; }
 
+/* ---------- pains ---------- */
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 18px;
+}
+.pain-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 26px;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.pain-card:hover { border-color: var(--accent-dim); transform: translateY(-2px); }
+.pain {
+  font-size: 15px;
+  font-style: italic;
+  color: var(--text-dim);
+  margin-bottom: 14px;
+}
+.fix { font-size: 14.5px; color: var(--text-dim); }
+.fix strong { color: var(--text); font-weight: 600; }
+
 /* ---------- changelog ---------- */
 .release {
   max-width: 720px;
@@ -349,6 +380,10 @@ a:hover { text-decoration: underline; }
 /* ---------- responsive ---------- */
 @media (max-width: 860px) {
   .hero { padding: 64px 0 56px; }
-  .nav nav { gap: 18px; }
+  .nav nav {
+    gap: 18px;
+    -webkit-mask-image: linear-gradient(to right, black 85%, transparent);
+    mask-image: linear-gradient(to right, black 85%, transparent);
+  }
   .nav nav a { font-size: 14px; }
 }
