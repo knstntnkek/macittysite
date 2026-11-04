@@ -61,19 +61,27 @@
   setTimeout(session, 6000 + Math.random() * 6000, pick());
 })();
 
+// Screenshot slideshow inside the app-window frame
 (function () {
-  const car = document.getElementById('carousel');
-  if (!car) return;
-  const track = car.querySelector('.carousel-track');
+  const box = document.getElementById('slideshow');
+  if (!box) return;
+  const track = box.querySelector('.slides');
   const slides = track.children;
-  const dotsBox = car.querySelector('.car-dots');
-  let current = 0;
+  const caption = document.getElementById('slide-caption');
+  const dotsBox = document.getElementById('slide-dots');
+  const CAPTIONS = [
+    'Sessions — every option a connection needs',
+    'Terminal — a live SSH session, embedded in the main window',
+    'Files — dual-pane SFTP browser on the same connection',
+    'Monitoring — CPU, memory and disk, live in the sidebar',
+  ];
+  let current = 0, timer = null;
 
   const dots = [...slides].map((_, i) => {
     const d = document.createElement('button');
     d.className = 'car-dot';
     d.setAttribute('aria-label', 'Screenshot ' + (i + 1));
-    d.addEventListener('click', () => go(i));
+    d.addEventListener('click', () => { go(i); restart(); });
     dotsBox.appendChild(d);
     return d;
   });
@@ -82,21 +90,28 @@
     current = (i + slides.length) % slides.length;
     track.scrollTo({ left: current * track.clientWidth, behavior: 'smooth' });
   }
-
   function sync() {
     current = Math.round(track.scrollLeft / track.clientWidth);
     dots.forEach((d, i) => d.classList.toggle('on', i === current));
+    if (caption) caption.textContent = CAPTIONS[current] || '';
+  }
+  function restart() {
+    clearInterval(timer);
+    timer = setInterval(() => go(current + 1), 5000);
   }
 
-  car.querySelector('.prev').addEventListener('click', () => go(current - 1));
-  car.querySelector('.next').addEventListener('click', () => go(current + 1));
+  box.querySelector('.prev').addEventListener('click', () => { go(current - 1); restart(); });
+  box.querySelector('.next').addEventListener('click', () => { go(current + 1); restart(); });
   track.addEventListener('scroll', sync, { passive: true });
   window.addEventListener('resize', sync);
+  box.addEventListener('pointerenter', () => clearInterval(timer));
+  box.addEventListener('pointerleave', restart);
   document.addEventListener('keydown', (e) => {
-    const r = car.getBoundingClientRect();
+    const r = box.getBoundingClientRect();
     if (r.top > innerHeight || r.bottom < 0) return;
-    if (e.key === 'ArrowLeft') go(current - 1);
-    if (e.key === 'ArrowRight') go(current + 1);
+    if (e.key === 'ArrowLeft') { go(current - 1); restart(); }
+    if (e.key === 'ArrowRight') { go(current + 1); restart(); }
   });
   sync();
+  restart();
 })();

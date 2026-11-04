@@ -10,18 +10,68 @@
 <meta property="og:type" content="website">
 <link rel="icon" type="image/png" href="icon.png">
 <link rel="apple-touch-icon" href="icon.png">
-<link rel="stylesheet" href="style.css?v=20261103-3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=20261104-1">
 </head>
 <body>
 
+<!-- pixel cat sprites (from the app icon's line-art style) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- cat head + whisker, 28×11 — nav / footer logo -->
+    <g id="pxcat-logo">
+      <path fill="#C4FFD6" d="M3 0h1v1h-1zM10 0h1v1h-1zM2 1h2v1h-2zM10 1h2v1h-2zM2 2h1v1h-1zM4 2h6v1h-6zM11 2h1v1h-1zM1 3h1v1h-1zM12 3h1v1h-1zM1 4h1v1h-1zM12 4h1v1h-1zM1 5h1v1h-1zM12 5h1v1h-1zM1 6h1v1h-1zM12 6h1v1h-1zM0 7h1v1h-1zM13 7h1v1h-1zM1 8h1v1h-1zM12 8h1v1h-1zM1 9h1v1h-1zM12 9h1v1h-1zM1 10h1v1h-1zM12 10h1v1h-1zM14 10h14v1h-14z"/>
+      <path fill="#37995b" d="M3 2h1v1h-1zM10 2h1v1h-1z"/>
+      <path fill="#359558" d="M2 3h10v1h-10z"/>
+      <path fill="#339256" d="M2 4h10v1h-10z"/>
+      <path fill="#318e54" d="M2 5h10v1h-10z"/>
+      <path fill="#308a52" d="M2 6h10v1h-10z"/>
+      <path fill="#2e8750" d="M1 7h12v1h-12z"/>
+      <path fill="#2c834e" d="M2 8h10v1h-10z"/>
+      <path fill="#2a804b" d="M2 9h10v1h-10z"/>
+      <path fill="#297c49" d="M2 10h10v1h-10z"/>
+      <path fill="#06230F" d="M3.5 6.5h2v0.75h-2zM8.5 6.5h2v0.75h-2zM7 9h0.666667v0.666667h-0.666667z"/>
+    </g>
+    <!-- full sitting cat, 40×21 — hero & cta -->
+    <g id="pxcat-full">
+      <path fill="#C4FFD6" d="M3 0h1v1h-1zM10 0h1v1h-1zM2 1h2v1h-2zM10 1h2v1h-2zM2 2h1v1h-1zM4 2h6v1h-6zM11 2h1v1h-1zM1 3h1v1h-1zM12 3h1v1h-1zM32 3h2v1h-2zM1 4h1v1h-1zM12 4h1v1h-1zM31 4h1v1h-1zM34 4h3v1h-3zM1 5h1v1h-1zM12 5h1v1h-1zM31 5h1v1h-1zM37 5h1v1h-1zM1 6h1v1h-1zM12 6h1v1h-1zM32 6h3v1h-3zM37 6h1v1h-1zM0 7h1v1h-1zM13 7h1v1h-1zM35 7h1v1h-1zM38 7h1v1h-1zM1 8h1v1h-1zM12 8h1v1h-1zM36 8h1v1h-1zM38 8h1v1h-1zM1 9h1v1h-1zM12 9h1v1h-1zM36 9h1v1h-1zM39 9h1v1h-1zM1 10h1v1h-1zM12 10h1v1h-1zM14 10h14v1h-14zM37 10h1v1h-1zM39 10h1v1h-1zM2 11h1v1h-1zM13 11h1v1h-1zM14 11h14v1h-14zM28 11h2v1h-2zM36 11h1v1h-1zM39 11h1v1h-1zM3 12h7v1h-7zM30 12h1v1h-1zM36 12h1v1h-1zM39 12h1v1h-1zM10 13h1v1h-1zM31 13h1v1h-1zM36 13h1v1h-1zM38 13h1v1h-1zM9 14h1v1h-1zM32 14h1v1h-1zM36 14h1v1h-1zM38 14h1v1h-1zM9 15h1v1h-1zM32 15h1v1h-1zM34 15h2v1h-2zM38 15h1v1h-1zM9 16h1v1h-1zM33 16h1v1h-1zM38 16h1v1h-1zM10 17h1v1h-1zM36 17h2v1h-2zM11 18h1v1h-1zM30 18h2v1h-2zM34 18h2v1h-2zM12 19h2v1h-2zM28 19h2v1h-2zM32 19h2v1h-2zM14 20h14v1h-14z"/>
+      <path fill="#37995b" d="M3 2h1v1h-1zM10 2h1v1h-1z"/>
+      <path fill="#359558" d="M2 3h10v1h-10z"/>
+      <path fill="#339256" d="M2 4h10v1h-10zM32 4h2v1h-2z"/>
+      <path fill="#318e54" d="M2 5h10v1h-10zM32 5h5v1h-5z"/>
+      <path fill="#308a52" d="M2 6h10v1h-10zM35 6h2v1h-2z"/>
+      <path fill="#2e8750" d="M1 7h12v1h-12zM36 7h2v1h-2z"/>
+      <path fill="#2c834e" d="M2 8h10v1h-10zM37 8h1v1h-1z"/>
+      <path fill="#2a804b" d="M2 9h10v1h-10zM37 9h2v1h-2z"/>
+      <path fill="#297c49" d="M2 10h10v1h-10zM38 10h1v1h-1z"/>
+      <path fill="#277947" d="M3 11h10v1h-10zM37 11h2v1h-2z"/>
+      <path fill="#257545" d="M10 12h20v1h-20zM37 12h2v1h-2z"/>
+      <path fill="#247143" d="M11 13h20v1h-20zM37 13h1v1h-1z"/>
+      <path fill="#226e40" d="M10 14h22v1h-22zM37 14h1v1h-1z"/>
+      <path fill="#206a3e" d="M10 15h22v1h-22zM36 15h2v1h-2z"/>
+      <path fill="#1e673c" d="M10 16h23v1h-23zM34 16h4v1h-4z"/>
+      <path fill="#1d633a" d="M11 17h25v1h-25z"/>
+      <path fill="#1b5f38" d="M12 18h18v1h-18zM32 18h2v1h-2z"/>
+      <path fill="#195c36" d="M14 19h14v1h-14z"/>
+      <path fill="#06230F" d="M3.5 6.5h2v0.75h-2zM8.5 6.5h2v0.75h-2zM7 9h0.666667v0.666667h-0.666667z"/>
+    </g>
+  </defs>
+</svg>
+
 <header class="nav">
   <div class="wrap nav-inner">
-    <a class="brand" href="#top"><img class="brand-icon" src="icon.png" alt="MaciTTY app icon"> MaciTTY</a>
+    <a class="brand" href="#top">
+      <svg class="logo-cat" viewBox="0 0 28 11" aria-hidden="true"><use href="#pxcat-logo"/></svg>
+      MaciTTY
+    </a>
     <nav>
       <a href="#why">Why MaciTTY</a>
       <a href="#screenshots">Screenshots</a>
       <a href="#features">Features</a>
       <a href="#privacy">Privacy</a>
+      <a href="changelog.html">Changelog</a>
       <a href="#download">Download</a>
     </nav>
   </div>
@@ -32,20 +82,23 @@
   <!-- HERO -->
   <section class="hero">
     <div class="wrap hero-inner">
-      <div class="hero-text">
-        <p class="badge">Native macOS · Free</p>
-        <h1>The SSH client<br>your Mac deserves.</h1>
-        <p class="lede">
-          Saved sessions in folders, credentials in your Keychain, one-click
-          connect, file transfer built in — a fast, native macOS client for
-          SSH, Telnet, Rlogin and serial.
-          <strong>Free, no account, no subscription, no telemetry.</strong>
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="MaciTTY-latest.dmg">Download for macOS</a>
-        </div>
-        <p class="hero-note">Universal build — Apple&nbsp;Silicon&nbsp;+&nbsp;Intel · macOS&nbsp;14+ · signed &amp; notarized</p>
+      <p class="badge">Native macOS · Free · no telemetry</p>
+      <h1>The SSH client<br>your Mac deserves.</h1>
+      <p class="lede">
+        Saved sessions in folders, credentials in your Keychain, one-click
+        connect, file transfer built in — a fast, native macOS client for
+        SSH, Telnet, Rlogin and serial.
+        <strong>Free, no account, no subscription, no telemetry.</strong>
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="MaciTTY-latest.dmg">Download for macOS</a>
+        <a class="btn btn-ghost" href="#screenshots">See it in action</a>
       </div>
+      <p class="hero-note">Universal build — Apple&nbsp;Silicon&nbsp;+&nbsp;Intel · macOS&nbsp;14+ · signed &amp; notarized</p>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg class="hero-cat" viewBox="0 0 40 21"><use href="#pxcat-full"/></svg>
+      <div class="cat-shadow"></div>
     </div>
   </section>
 
@@ -57,43 +110,45 @@
       <div class="pain-grid">
 
         <div class="pain-card">
-          <p class="pain">"There's no PuTTY for Mac — I just want my saved sessions back."</p>
-          <p class="fix"><strong>The session manager you miss.</strong> Saved sessions
-          in folders, stored credentials, inherited defaults, one-click connect —
-          rebuilt as a real Mac app.</p>
+          <p class="pain">“There’s no PuTTY for Mac — I just want my saved sessions back.”</p>
+          <p class="fix-lead">The session manager you miss.</p>
+          <p class="fix">Saved sessions in folders, stored credentials, inherited
+          defaults, one-click connect — rebuilt as a real Mac app.</p>
         </div>
 
         <div class="pain-card">
-          <p class="pain">"$120 a year — for an SSH client?"</p>
-          <p class="fix"><strong>Free. Really.</strong> No account needed,
-          no expiring trial.</p>
+          <p class="pain">“$120 a year — for an SSH client?”</p>
+          <p class="fix-lead">Free. Really.</p>
+          <p class="fix">No account needed, no expiring trial.</p>
         </div>
 
         <div class="pain-card">
-          <p class="pain">"I type the same password twenty times a day."</p>
-          <p class="fix"><strong>Type it once.</strong> MaciTTY spots the login
-          prompt and offers to save it in your Keychain behind Touch ID —
-          every login after that is automatic.</p>
+          <p class="pain">“I type the same password twenty times a day.”</p>
+          <p class="fix-lead">Type it once.</p>
+          <p class="fix">MaciTTY spots the login prompt and offers to save it in
+          your Keychain behind Touch ID — every login after that is automatic.</p>
         </div>
 
         <div class="pain-card">
-          <p class="pain">"SSH in one app, file transfer in another — credentials in both."</p>
-          <p class="fix"><strong>Files included.</strong> A dual-pane SFTP browser
-          in the same window, on the same connection — drag &amp; drop transfers
-          and remote files editable in your local editor.</p>
+          <p class="pain">“SSH in one app, file transfer in another — credentials in both.”</p>
+          <p class="fix-lead">Files included.</p>
+          <p class="fix">A dual-pane SFTP browser in the same window, on the same
+          connection — drag &amp; drop transfers and remote files editable in
+          your local editor.</p>
         </div>
 
         <div class="pain-card">
-          <p class="pain">"Electron SSH apps beach-ball on large output."</p>
-          <p class="fix"><strong>Native speed.</strong> A real Mac UI over a fast
-          C engine — instant session switching, no Electron anywhere.</p>
+          <p class="pain">“Electron SSH apps beach-ball on large output.”</p>
+          <p class="fix-lead">Native speed.</p>
+          <p class="fix">A real Mac UI over a fast C engine — instant session
+          switching, no Electron anywhere.</p>
         </div>
 
         <div class="pain-card">
-          <p class="pain">"Sync my sessions? Only behind your subscription."</p>
-          <p class="fix"><strong>Your sync, your cloud.</strong> Optional iCloud
-          sync uses your own private iCloud — no account with us, and
-          credentials are never synced.</p>
+          <p class="pain">“Sync my sessions? Only behind your subscription.”</p>
+          <p class="fix-lead">Your sync, your cloud.</p>
+          <p class="fix">Optional iCloud sync uses your own private iCloud —
+          no account with us, and credentials are never synced.</p>
         </div>
 
       </div>
@@ -103,124 +158,141 @@
   <!-- SCREENSHOTS -->
   <section id="screenshots" class="section">
     <div class="wrap">
-      <h2 class="section-title">See it in action</h2>
-      <p class="section-sub">Sessions, terminal and file transfer — all in one window.</p>
+      <div class="section-head">
+        <h2 class="section-title">See it in action</h2>
+        <p class="section-sub">Sessions, terminal and file transfer — all in one window.</p>
+      </div>
 
-      <div class="carousel" id="carousel">
-        <div class="carousel-track">
-          <figure class="slide">
-            <img src="screenshot-terminal.png" alt="Embedded terminal showing a live SSH session" width="1024" height="690">
-            <figcaption>Terminal — a live SSH session, embedded in the main window</figcaption>
-          </figure>
-          <figure class="slide">
-            <img src="screenshot-sftp.png" alt="Dual-pane SFTP file browser with local and remote listings" width="1024" height="690">
-            <figcaption>Files — dual-pane SFTP browser with drag &amp; drop</figcaption>
-          </figure>
-          <figure class="slide">
-            <img src="screenshot-settings.png" alt="Session library with folders and per-session settings editor" width="1024" height="690">
-            <figcaption>Settings — every option a connection needs</figcaption>
-          </figure>
+      <div class="app-window" id="slideshow">
+        <div class="title-bar">
+          <span class="tl-dot"></span><span class="tl-dot"></span><span class="tl-dot"></span>
+          <span class="window-title">MaciTTY — ubuntu VM · ssh</span>
+        </div>
+        <div class="slides">
+          <figure class="slide"><img src="shot-settings.png" alt="MaciTTY session editor with folder, monitoring and authentication settings" width="1024" height="720"></figure>
+          <figure class="slide"><img src="shot-terminal.png" alt="Embedded terminal showing a live SSH session login" width="1024" height="720"></figure>
+          <figure class="slide"><img src="shot-files.png" alt="Dual-pane SFTP browser with local and remote file listings" width="1024" height="720"></figure>
+          <figure class="slide"><img src="shot-live.png" alt="Terminal session with live CPU, memory and disk metrics in the sidebar" width="1024" height="720"></figure>
         </div>
         <button class="car-btn prev" aria-label="Previous screenshot"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         <button class="car-btn next" aria-label="Next screenshot"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-        <div class="car-dots" role="tablist"></div>
       </div>
+      <p class="caption" id="slide-caption"></p>
+      <div class="car-dots" id="slide-dots"></div>
     </div>
   </section>
 
   <!-- FEATURES -->
-  <section id="features" class="section">
+  <section id="features" class="section section-alt">
     <div class="wrap">
-      <h2 class="section-title">The complete toolkit</h2>
-      <p class="section-sub">Everything below is implemented and shipping today.</p>
+      <div class="section-head">
+        <h2 class="section-title">The complete toolkit</h2>
+        <p class="section-sub">Everything below is implemented and shipping today.</p>
+      </div>
 
-      <div class="grid">
+      <div class="feature-grid">
 
-        <div class="card">
+        <div class="feature">
+          <span class="idx">01</span>
           <h3>Session manager</h3>
-          <p>Saved sessions in folders, a Default Settings profile everything inherits,
-          quick connect (<code>user@host</code>, <code>ssh://…</code>) and search —
-          with live connections embedded in one window and instant switching.</p>
+          <p>Saved sessions in folders, a Default Settings profile everything
+          inherits, quick connect and search — with live connections embedded
+          in one window and instant switching.</p>
+          <div class="chips"><code>user@host</code><code>ssh://…</code></div>
         </div>
 
-        <div class="card">
+        <div class="feature">
+          <span class="idx">02</span>
           <h3>Keys &amp; authentication</h3>
-          <p>Every way in: password, keyboard-interactive, public keys
-          (<code>.ppk</code> and OpenSSH formats), ssh-agent, certificates
-          and Kerberos/GSSAPI — and a password typed at the prompt can be
-          saved to the Keychain on the spot.</p>
+          <p>Every way in: password, keyboard-interactive, public keys,
+          ssh-agent, certificates and Kerberos/GSSAPI — and a password typed
+          at the prompt can be saved to the Keychain on the spot.</p>
+          <div class="chips"><code>.ppk</code><code>OpenSSH</code></div>
         </div>
 
-        <div class="card">
+        <div class="feature">
+          <span class="idx">03</span>
           <h3>SFTP file browser</h3>
           <p>Local and remote files side by side — drag &amp; drop or toolbar
           actions on either pane, recursive transfers with progress. Edit a
-          remote file in your favourite local editor; saves upload back,
+          remote file in your favourite local editor, saves upload back,
           with conflict detection.</p>
         </div>
 
-        <div class="card">
+        <div class="feature">
+          <span class="idx">04</span>
           <h3>Syncs across your Macs</h3>
           <p>Optional iCloud sync carries your sessions and settings to your
           other Macs through your own private iCloud — credentials are
           never synced, so secrets stay in each Mac's Keychain.</p>
         </div>
 
-        <div class="card">
+        <div class="feature">
+          <span class="idx">05</span>
           <h3>Every protocol</h3>
           <p>Secure SSH connections, plus Telnet, Rlogin, Raw TCP and Serial
           for network gear, embedded boards and legacy systems.</p>
         </div>
 
-        <div class="card">
+        <div class="feature">
+          <span class="idx">06</span>
           <h3>Tunnels &amp; forwarding</h3>
           <p>Local, remote and dynamic (SOCKS) port forwarding, editable
           live mid-session — plus X11 and agent forwarding and
           connection sharing.</p>
         </div>
 
-        <div class="card">
+        <div class="feature">
+          <span class="idx">07</span>
           <h3>Proxies &amp; jump hosts</h3>
           <p>Reach hosts through HTTP CONNECT, SOCKS&nbsp;4/5, Telnet or local
           commands — or hop through another SSH host, with DNS resolved
           at the proxy.</p>
         </div>
 
-        <div class="card">
+        <div class="feature">
+          <span class="idx">08</span>
           <h3>Terminal your way</h3>
           <p>Colours and palette editor, cursor styles, bells and Dock alerts,
           keyboard modes, 25 legacy charsets, light/dark/system themes —
           and four app icons to pick from.</p>
         </div>
 
-        <div class="card">
+        <div class="feature">
+          <span class="idx">09</span>
           <h3>Advanced SSH control</h3>
           <p>Tune key exchange, cipher and host-key preferences, rekey limits,
           compression and keepalives, pin host keys manually — including
           workarounds for quirky servers.</p>
         </div>
 
-        <div class="card">
-          <h3>Imports your <code>~/.ssh/config</code></h3>
+        <div class="feature">
+          <span class="idx">10</span>
+          <h3>Imports your ~/.ssh/config</h3>
           <p>Every <code>Host</code> becomes a saved session — includes,
           jump hosts, forwardings and identity files carried over,
           with a preview before anything is written.</p>
         </div>
 
-        <div class="card">
+        <div class="feature">
+          <span class="idx">11</span>
           <h3>Session logging</h3>
-          <p>Record printable output, everything, protocol packets or raw data —
-          with timestamped filename placeholders and append/overwrite/ask control.</p>
+          <p>Record printable output, everything, protocol packets or raw
+          data — with timestamped filename placeholders and
+          append/overwrite/ask control.</p>
         </div>
 
-        <div class="card">
+        <div class="feature">
+          <span class="idx">12</span>
           <h3>Scriptable launch</h3>
           <p>Open sessions straight from the command line or scripts —
-          <code>open -a MaciTTY --args -ssh -P 2222 -L 8080:web:80 user@host</code>
-          — with support for saved sessions, keys, tunnels and serial parameters.</p>
+          with support for saved sessions, keys, tunnels and serial
+          parameters.</p>
+          <div class="chips"><code>open -a MaciTTY --args -ssh user@host</code></div>
         </div>
 
-        <div class="card">
+        <div class="feature">
+          <span class="idx">13</span>
           <h3>Speaks your language</h3>
           <p>Fully localized in English, German, Russian and Spanish —
           pick your language right in settings.</p>
@@ -231,42 +303,58 @@
   </section>
 
   <!-- PRIVACY -->
-  <section id="privacy" class="section section-alt">
+  <section id="privacy" class="section">
     <div class="wrap">
-      <h2 class="section-title">Private by design</h2>
-      <p class="section-sub">No accounts, no telemetry, no analytics — and no cloud of ours, because there isn't one.</p>
+      <div class="section-head">
+        <h2 class="section-title">Private by design</h2>
+        <p class="section-sub">No accounts, no telemetry, no analytics — and no cloud of ours, because there isn't one.</p>
+      </div>
 
-      <div class="privacy-panel">
-        <ul class="privacy-list">
-          <li><strong>Your data lives on your Mac</strong> — sessions, settings and files stay on local disk.</li>
-          <li><strong>Secrets stay in the Keychain</strong> — passwords and passphrases behind Touch ID, and one click forgets them all.</li>
-          <li><strong>Lock the app, not the work</strong> — app lock on launch, idle or sleep while sessions keep running.</li>
-          <li><strong>Sync that's still yours</strong> — optional iCloud sync uses your private iCloud; credentials are never included.</li>
-          <li><strong>Trust, verified</strong> — host-key checks on every new server, one isolated process per session.</li>
-        </ul>
+      <div class="checklist-card">
+        <div class="check-row">
+          <svg class="check" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><strong>Your data lives on your Mac</strong><span>Sessions, settings and files stay on local disk.</span></div>
+        </div>
+        <div class="check-row">
+          <svg class="check" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><strong>Secrets stay in the Keychain</strong><span>Passwords and passphrases behind Touch ID, and one click forgets them all.</span></div>
+        </div>
+        <div class="check-row">
+          <svg class="check" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><strong>Lock the app, not the work</strong><span>App lock on launch, idle or sleep while sessions keep running.</span></div>
+        </div>
+        <div class="check-row">
+          <svg class="check" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><strong>Sync that's still yours</strong><span>Optional iCloud sync uses your private iCloud; credentials are never included.</span></div>
+        </div>
+        <div class="check-row">
+          <svg class="check" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div><strong>Trust, verified</strong><span>Host-key checks on every new server, one isolated process per session.</span></div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- MORE -->
-  <section class="section">
+  <section class="section section-alt">
     <div class="wrap">
-      <div class="more">
+      <div class="coming-card">
         <h3>More features are coming.</h3>
         <p>MaciTTY is actively developed — and it keeps itself updated,
-        so new builds find you automatically.
-        <a href="changelog.html">See the changelog</a> for what's already landed.</p>
+        so new builds find you automatically.</p>
+        <a class="mono-link" href="changelog.html">See the changelog →</a>
       </div>
     </div>
   </section>
 
   <!-- DOWNLOAD CTA -->
-  <section id="download" class="section cta">
+  <section id="download" class="cta">
     <div class="wrap cta-inner">
       <h2>Take it for a spin.</h2>
-      <p>Grab the latest build — free, universal, no account or subscription.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="MaciTTY-latest.dmg">Download latest build</a>
+      <p class="cta-sub">Grab the latest build — free, universal, no account or subscription.</p>
+      <div class="cta-cat">
+        <svg class="cta-cat-svg" viewBox="0 0 40 21" aria-hidden="true"><use href="#pxcat-full"/></svg>
+        <a class="btn btn-primary btn-big" href="MaciTTY-latest.dmg">Download latest build</a>
       </div>
       <p class="cta-note">v0.5.1 · signed and notarized by Apple — open the DMG and drag MaciTTY to Applications. The app checks for updates itself, so you'll always be on the latest build.</p>
     </div>
@@ -276,11 +364,14 @@
 
 <footer class="footer">
   <div class="wrap footer-inner">
-    <span class="brand"><img class="brand-icon" src="icon.png" alt="MaciTTY app icon"> MaciTTY</span>
+    <span class="brand">
+      <svg class="logo-cat" viewBox="0 0 28 11" aria-hidden="true"><use href="#pxcat-logo"/></svg>
+      MaciTTY
+    </span>
     <p>Includes technology from the PuTTY project, © 1997–2026 Simon Tatham, MIT licence.</p>
   </div>
 </footer>
 
-<script src="site.js?v=20261103-3"></script>
+<script src="site.js?v=20261104-1"></script>
 </body>
 </html>
