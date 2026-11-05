@@ -376,6 +376,13 @@ svg.logo-cat, svg.hero-cat, svg.cta-cat-svg { shape-rendering: crispEdges; }
   max-width: 620px;
   margin: 26px auto 0;
 }
+.cta-brew {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--mono-dim);
+  margin-top: 14px;
+}
+.cta-brew code { font-size: 12.5px; }
 
 /* ---------- footer ---------- */
 .footer {
