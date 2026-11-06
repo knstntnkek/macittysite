@@ -70,10 +70,10 @@
   const caption = document.getElementById('slide-caption');
   const dotsBox = document.getElementById('slide-dots');
   const CAPTIONS = [
-    'Sessions — every option a connection needs',
+    'All your servers in one place, grouped, tagged and monitored',
+    'Search — matches names, hosts and tags',
     'Terminal — a live SSH session, embedded in the main window',
-    'Files — dual-pane SFTP browser on the same connection',
-    'Monitoring — CPU, memory and disk, live in the sidebar',
+    'Files — dual-pane SFTP with a history of every operation and Finder drag\'n\'drop',
   ];
   let current = 0, timer = null;
 
