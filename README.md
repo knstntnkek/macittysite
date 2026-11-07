@@ -11,6 +11,8 @@ Mac app. All data stays on your Mac: no accounts, no cloud sync, no telemetry.
 **Download:** `MaciTTY-latest.dmg` right here in this repository — open it and
 drag MaciTTY to Applications.
 
+**Or via Homebrew:** `brew install --cask knstntnkek/macitty/macitty`
+
 ## Found a bug? Have an idea?
 
 This repository is the place to report problems and request features.
