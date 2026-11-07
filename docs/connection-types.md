@@ -60,3 +60,7 @@ dead shell shouldn't loop-respawn; the "Shell exited" banner restarts it on
 demand. The Files tab and [monitoring](monitoring.md) don't apply either —
 those need SSH. In the sidebar, a local session shows a terminal icon and
 the shell name instead of a host.
+
+![Local Shell session settings](img/connection-localshell.png)
+
+![A local shell running inside MaciTTY](img/connection-localshell-live.png)

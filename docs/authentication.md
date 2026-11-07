@@ -34,6 +34,8 @@ First connection to a host shows its key fingerprint for confirmation. Known
 hosts are kept locally; if a server's key *changes* later, MaciTTY warns you
 rather than connecting silently — the standard SSH trust model.
 
+![Host key verification on first connect](img/auth-hostkey.png)
+
 ## Keyboard-interactive &amp; multi-step logins
 
 Bastion and OTP flows ("password, then code, then second password") run as

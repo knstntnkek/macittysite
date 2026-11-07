@@ -32,13 +32,3 @@ Four alternate app icons to pick from in Settings — including variants for
 light and dark docks.
 
 ![The app icon picker](img/terminal-icons.png)
-
-## Finding text in a session
-
-A find bar searches the visible scrollback:
-
-- `⌘F` — open find, `⌘⇧F` — close it
-- `⌘G` / `⌘⇧G` — next / previous match
-- `⌘E` — use the current selection as the search text
-
-Case, regex and whole-word toggles live in the bar itself.

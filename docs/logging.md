@@ -31,3 +31,15 @@ When a log filename already exists, choose what happens:
 > [Default Settings](sessions.md#default-settings), for everything). The
 > files are plain text — point them at a folder you archive, not the
 > Desktop.
+
+## Finding text in a session
+
+A find bar searches the visible scrollback:
+
+- `⌘F` — open find, `⌘⇧F` — close it
+- `⌘G` / `⌘⇧G` — next / previous match
+- `⌘E` — use the current selection as the search text
+
+Case, regex and whole-word toggles live in the bar itself.
+
+![The find bar searching scrollback](img/terminal-find.png)
