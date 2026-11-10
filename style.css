@@ -398,6 +398,10 @@ svg.logo-cat, svg.hero-cat, svg.cta-cat-svg { shape-rendering: crispEdges; }
 }
 .footer .brand { font-size: 15px; }
 .footer .logo-cat { width: 26px; }
+.footer-nav { display: flex; gap: 24px; flex-wrap: wrap; }
+.footer-nav a { color: var(--mono-dim); font-size: 13px; white-space: nowrap; }
+.footer-nav a:hover { color: var(--text); text-decoration: none; }
+.footer-note { margin: 0; }
 
 /* ---------- changelog ---------- */
 .release {
