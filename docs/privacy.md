@@ -22,10 +22,10 @@ it in Settings; it's optional.
 
 ## iCloud sync
 
-Optional sync carries your library to your other Macs — sessions, folders,
-tags, notes, snippets and settings — through **your own private iCloud
-account** (CloudKit). Apple holds the data under your account; MaciTTY has
-no servers of its own.
+A **MaciTTY Pro** feature. Optional sync carries your library to your other
+Macs — sessions, folders, tags, notes, snippets and settings — through
+**your own private iCloud account** (CloudKit). Apple holds the data under
+your account; MaciTTY has no servers of its own.
 
 **Credentials are deliberately never synced** — passwords stay in each
 Mac's own Keychain, so a synced session on a second Mac still asks you to

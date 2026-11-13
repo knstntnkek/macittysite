@@ -7,18 +7,22 @@ grouped in folders, searchable, and one click away from a connection.
 
 ## Saving sessions
 
-- `⌘N` or **File → New Connection** creates a session and opens its settings.
+- `⌘N` or **File → New Session** creates a session and opens its settings.
 - Sessions are edited in place — select one in the sidebar to see every
   setting it carries.
 - `⌘D` duplicates the selected session — handy for a second host that differs
   only in address.
 - `⌘⇧L` (**File → Saved Sessions**) focuses the library from anywhere.
 
+The free tier keeps **12 usable sessions** — anything beyond that stays
+saved, locked, never deleted. [Pro](pro.md) opens every session in the
+library.
+
 ## Folders
 
 Drag sessions into folders to group them however you think — by client, by
-environment, by project. Folders can be collapsed; the library keeps the
-arrangement between launches.
+environment, by project — and drag to reorder within them. Folders can be
+collapsed; the library keeps the arrangement between launches.
 
 ## Default Settings
 
@@ -48,9 +52,19 @@ Both tags and notes [sync with your other Macs](privacy.md#icloud-sync).
 ## Live connections
 
 Connected sessions show live in the sidebar. Clicking one switches to its
-terminal instantly; the sidebar row also carries a close control and —
-when [monitoring](monitoring.md) is enabled — live CPU/memory/disk/load
-metrics.
+terminal instantly; the sidebar row also carries a status indicator, a
+close control and — when [monitoring](monitoring.md) is enabled — live
+CPU/memory/disk/load metrics.
+
+Right-clicking a live connection opens its context menu: **Duplicate
+Session** opens a second connection with the same settings, **Event Log**
+shows the connection's diagnostic output, and **Change Settings** adjusts
+this session mid-flight without touching the saved profile.
+
+Run two panes side by side with [split view](terminal.md#split-view) — a
+Pro feature — and jump between them with `⌘]`/`⌘[`; opening a fifth
+connection hits the free tier's
+[concurrent limit](pro.md#what-pro-unlocks).
 
 ## Importing `~/.ssh/config`
 

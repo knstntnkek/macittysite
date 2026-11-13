@@ -12,6 +12,20 @@ username — everything else (auth, forwarding, keepalives, host-key policy)
 lives on the other setting panes; see [Authentication](authentication.md)
 and [Proxies &amp; tunnels](proxies-tunnels.md).
 
+The **SSH** pane carries the less-common protocol options:
+
+- **Remote command** — run a command on the server instead of a shell;
+  pair with **Don't allocate a pseudo-terminal** for non-interactive use
+- **Don't start a shell or command at all** — for connections that exist
+  only to carry port forwardings
+- **Enable compression** — helps on slow links
+- **Connection sharing** — a second session to the same host reuses the
+  open SSH connection instead of re-authenticating
+- **SSH protocol version** — SSH-2 only by default; SSH-1 remains for
+  legacy gear (don't treat it as secure)
+
+Environment variables to pass to the server live on the **Data** pane.
+
 ## Telnet &amp; Rlogin
 
 Plain-text protocols for legacy systems and network gear that still speaks
@@ -22,7 +36,9 @@ options are limited to what the protocol supports.
 
 A bare socket to `host:port` — for talking to devices and services that have
 no login protocol at all: serial-over-TCP bridges, debug consoles, MUDs,
-proprietary appliances.
+proprietary appliances. For MUDs and other line-at-a-time services, turn on
+**local echo** and **local line editing** on the Terminal pane — there's no
+server to echo your input back.
 
 ## Serial
 
@@ -60,6 +76,9 @@ dead shell shouldn't loop-respawn; the "Shell exited" banner restarts it on
 demand. The Files tab and [monitoring](monitoring.md) don't apply either —
 those need SSH. In the sidebar, a local session shows a terminal icon and
 the shell name instead of a host.
+
+> Local Shell exists only in the **direct-download build** — spawning a
+> local shell is one of the things the App Store sandbox forbids.
 
 ![Local Shell session settings](img/connection-localshell.png)
 
