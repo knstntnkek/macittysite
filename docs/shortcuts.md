@@ -20,6 +20,13 @@
 | `⌘⇧G` | Previous match |
 | `⌘E` | Use selection for find |
 
+## Panes (split view)
+
+| Shortcut | Action |
+|---|---|
+| `⌘]` | Focus the other pane |
+| `⌘[` | Focus the other pane back |
+
 ## App
 
 | Shortcut | Action |

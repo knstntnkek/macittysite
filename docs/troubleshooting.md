@@ -44,6 +44,24 @@ next prompt.
 - Session logs: wherever you point the log path on the
   [Logging pane](logging.md)
 
+## A connection fails or misbehaves
+
+Right-click the live connection → **Event Log**. It records each step of
+the connection — proxy negotiation, auth method attempts, key exchange —
+and usually names the failure directly. Include it when
+[reporting a bug](#report-a-bug-or-request-a-feature).
+
+## A license key won't activate / Pro isn't recognized
+
+- Direct download: license keys are coming soon — when they land, paste
+  the whole key in the app's Pro panel; keys will unlock the
+  website/Homebrew build only.
+- App Store version: use **Restore Purchases** in the paywall or in
+  Settings — purchases are Apple's, and can't unlock the direct download.
+- Purchase questions and channel mix-ups:
+  [support@macitty.app](mailto:support@macitty.app); see
+  [Pro &amp; licensing](pro.md).
+
 ## Report a bug or request a feature
 
 Open an issue on
