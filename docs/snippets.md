@@ -42,10 +42,8 @@ of the variable syntax and can be deleted like any other.
 
 ## Sharing &amp; sync
 
-Snippets **export/import as JSON** — a
-[Pro](pro.md) feature, and a quick way to move a library between
+Snippets **export/import as JSON** — a quick way to move a library between
 Macs or share it with a teammate.
 
 They also [sync via iCloud](privacy.md#icloud-sync) with the rest of your
-data — another Pro feature — so a snippet saved on one Mac shows up on the
-others.
+data, so a snippet saved on one Mac shows up on the others.

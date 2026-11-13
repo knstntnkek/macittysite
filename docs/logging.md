@@ -1,7 +1,5 @@
 # Session logging
 
-A **MaciTTY Pro** feature — see [Pro &amp; licensing](pro.md).
-
 The **Logging** pane turns on session recording — for change windows,
 compliance trails, or just remembering what a command did.
 

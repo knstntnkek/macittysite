@@ -13,7 +13,6 @@ const PAGES = [
   { slug: "terminal",        title: "Customizing the terminal" },
   { slug: "logging",         title: "Session logging" },
   { slug: "privacy",         title: "Privacy & security" },
-  { slug: "pro",             title: "Pro & licensing" },
   { slug: "shortcuts",       title: "Keyboard shortcuts" },
   { slug: "troubleshooting", title: "Troubleshooting & FAQ" },
 ];

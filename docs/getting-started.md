@@ -3,7 +3,7 @@
 MaciTTY is a native macOS terminal client for SSH, Telnet, Rlogin, raw TCP and
 serial connections. It keeps saved sessions in folders, stores credentials in
 the Keychain, connects in one click, and includes a built-in dual-pane SFTP
-browser — no accounts, no separate apps.
+browser — no subscriptions, no accounts, no separate apps.
 
 ![The MaciTTY main window](img/getting-started-window.png)
 
@@ -25,19 +25,6 @@ Applications.
 brew install --cask knstntnkek/macitty/macitty
 ```
 
-**Mac App Store:** the sandboxed build — the direct download keeps a few
-power features the sandbox forbids (local shell, agent forwarding, X11).
-A Pro purchase covers one channel; see
-[Pro &amp; licensing](pro.md#two-versions-two-purchase-channels) for the details.
-
-## Free and Pro
-
-The free tier covers everyday use — 12 saved sessions and 4 connections
-at once, no time limit, no account. [MaciTTY Pro](pro.md) lifts the caps
-and adds split view, iCloud sync, session logging and snippet export.
-Already using MaciTTY before Pro existed? Your install keeps it —
-nothing you have is taken away.
-
 ## Your first connection
 
 The fastest way in is the **quick connect** field at the top of the sidebar —
@@ -49,7 +36,7 @@ hops.
 
 For servers you use more than once, save a session instead:
 
-1. Press `⌘N` (or **File → New Session**).
+1. Press `⌘N` (or **File → New Connection**).
 2. Fill in the host, port and username on the **Connection** pane.
 3. Pick your authentication on the **SSH** pane — see
    [Authentication](authentication.md).

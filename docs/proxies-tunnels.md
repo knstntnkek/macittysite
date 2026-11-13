@@ -25,9 +25,8 @@ fields the chosen type needs.
 
 ## Jump hosts
 
-For the common "connect through a bastion" case, pick an SSH-to-proxy type —
-then the **jump host picker** lets you choose any *saved session* as the hop
-instead of retyping its address and credentials — equivalent to OpenSSH's
+For the common "connect through a bastion" case, pick an SSH-to-proxy type
+and fill in the jump host's address and credentials — equivalent to OpenSSH's
 `ProxyJump`. Sessions [imported from `~/.ssh/config`](sessions.md#importing-sshconfig)
 with `ProxyJump` land here automatically.
 
@@ -50,6 +49,5 @@ with the connection and live as long as it does.
 - **X11 forwarding**
 - **GSSAPI credential forwarding** — delegate your Kerberos ticket
 
-Keepalives live on the Connection pane: the app-level **keepalive interval**
-sends in-band pings on a schedule, and **TCP keepalives** work below the
-protocol — either helps connections that idle through NATs or firewalls.
+TCP keepalives are on the Connection pane — useful for connections that idle
+through NATs or firewalls.

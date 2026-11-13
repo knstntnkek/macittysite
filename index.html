@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MaciTTY — a native SSH &amp; terminal client for macOS</title>
-<meta name="description" content="MaciTTY is a native macOS terminal client for SSH, Telnet, Rlogin and serial — saved sessions in folders, stored credentials, one-click connect, built-in SFTP and optional iCloud sync. Free for everyday work, Pro for more — no account, no telemetry.">
+<meta name="description" content="MaciTTY is a native macOS terminal client for SSH, Telnet, Rlogin and serial — saved sessions in folders, stored credentials, one-click connect, built-in SFTP and optional iCloud sync. Free, no account, no subscription, no telemetry.">
 <meta property="og:title" content="MaciTTY — the SSH client your Mac deserves">
 <meta property="og:description" content="A native macOS terminal client for SSH, Telnet, Rlogin and serial. No telemetry, no accounts — all data stays on your Mac.">
 <meta property="og:type" content="website">
@@ -27,8 +27,8 @@
   "downloadUrl": "https://macitty.app/MaciTTY-latest.dmg",
   "operatingSystem": "macOS",
   "applicationCategory": "DeveloperApplication",
-  "softwareVersion": "1.0",
-  "description": "A native macOS terminal client for SSH, Telnet, Rlogin and serial — saved sessions in folders, stored credentials, built-in SFTP, server monitoring and optional iCloud sync. Free tier, no telemetry, no accounts.",
+  "softwareVersion": "0.9.1",
+  "description": "A native macOS terminal client for SSH, Telnet, Rlogin and serial — saved sessions in folders, stored credentials, built-in SFTP, server monitoring and optional iCloud sync. No telemetry, no accounts.",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
   "author": { "@type": "Organization", "name": "MaciTTY", "url": "https://macitty.app/" }
 }
@@ -38,7 +38,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20261112-2">
+<link rel="stylesheet" href="style.css?v=20261109-1">
 </head>
 <body>
 
@@ -95,7 +95,6 @@
       <a href="#why">Why MaciTTY</a>
       <a href="#screenshots">Screenshots</a>
       <a href="#features">Features</a>
-      <a href="#pro">Pro</a>
       <a href="#privacy">Privacy</a>
       <a href="changelog.html">Changelog</a>
       <a href="docs.html">Docs</a>
@@ -115,7 +114,7 @@
         Saved sessions in folders, credentials in your Keychain, one-click
         connect, file transfer built in — a fast, native macOS client for
         SSH, Telnet, Rlogin and serial.
-        <strong>Free for everyday work — no account, no telemetry.</strong>
+        <strong>Free, no account, no subscription, no telemetry.</strong>
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="MaciTTY-latest.dmg" data-goatcounter-click="download-dmg" data-goatcounter-title="DMG download — hero">Download for macOS</a>
@@ -140,16 +139,15 @@
           <p class="pain">“There’s no PuTTY for Mac — I just want my saved sessions back.”</p>
           <p class="fix-lead">The session manager you miss.</p>
           <p class="fix">Saved sessions in folders, stored credentials, inherited
-          defaults, one-click connect — rebuilt as a real Mac app, and your
-          <code>~/.ssh/config</code> imports in one step.</p>
+          defaults, one-click connect — rebuilt as a real Mac app.</p>
         </div>
 
         <div class="pain-card">
           <p class="pain">“$120 a year — for an SSH client?”</p>
-          <p class="fix-lead">A free tier that isn't a demo.</p>
-          <p class="fix">12 saved sessions, 4 connections at once, no account,
-          no expiry — and if you want more, Pro is $29.99 once, or
-          $1.49 a month.</p>
+          <p class="fix-lead">Free. Really.</p>
+          <p class="fix">No account needed, no expiring trial — MaciTTY was
+          built for personal use to be the best SSH client, then shared
+          because others needed it too.</p>
         </div>
 
         <div class="pain-card">
@@ -175,10 +173,17 @@
         </div>
 
         <div class="pain-card">
-          <p class="pain">“Sync my sessions? Only to your cloud, behind your account.”</p>
+          <p class="pain">“Sync my sessions? Only behind your subscription.”</p>
           <p class="fix-lead">Your sync, your cloud.</p>
-          <p class="fix">Optional iCloud sync rides your own private iCloud —
-          no account with us, credentials are never synced. A Pro feature.</p>
+          <p class="fix">Optional iCloud sync uses your own private iCloud —
+          no account with us, and credentials are never synced.</p>
+        </div>
+
+        <div class="pain-card">
+          <p class="pain">“Wi-Fi drops, laptop sleeps — my sessions just die.”</p>
+          <p class="fix-lead">Comes back on its own.</p>
+          <p class="fix">Dropped connections retry automatically and restore
+          your terminal — and the SFTP pane with it.</p>
         </div>
 
       </div>
@@ -234,14 +239,21 @@
           <span class="idx">02</span>
           <h3>Session manager</h3>
           <p>Saved sessions in folders, a Default Settings profile everything
-          inherits, quick connect and search that matches tags — drag &amp;
-          drop to organize, live status in each row, live connections embedded
-          in one window with instant switching.</p>
+          inherits, quick connect and search that matches tags — with live
+          connections embedded in one window and instant switching.</p>
           <div class="chips"><code>user@host</code><code>ssh://…</code></div>
         </div>
 
         <div class="feature">
           <span class="idx">03</span>
+          <h3>Tags &amp; notes</h3>
+          <p>Tag sessions by what they do — chips show under each host in the
+          sidebar and search matches them. A private note per server keeps
+          the details worth remembering.</p>
+        </div>
+
+        <div class="feature">
+          <span class="idx">04</span>
           <h3>Keys &amp; authentication</h3>
           <p>Every way in: password, keyboard-interactive, public keys,
           ssh-agent, certificates and Kerberos/GSSAPI — and a password typed
@@ -250,7 +262,7 @@
         </div>
 
         <div class="feature">
-          <span class="idx">04</span>
+          <span class="idx">05</span>
           <h3>SFTP file browser</h3>
           <p>Local and remote files side by side — drag &amp; drop from
           Finder, right-click menus and a visible history of every
@@ -259,35 +271,27 @@
         </div>
 
         <div class="feature">
-          <span class="idx">05</span>
-          <h3>Tunnels &amp; proxies</h3>
-          <p>Local, remote and dynamic port forwarding in a table, not a
-          config file — plus a jump-host picker for bastions and
-          SOCKS/HTTP proxies for corporate networks.</p>
-        </div>
-
-        <div class="feature">
           <span class="idx">06</span>
-          <h3>Split view <span class="pro-tag">Pro</span></h3>
-          <p>Two terminals side by side — or a terminal and its files —
-          in one window. Per-pane focus, a draggable divider and
-          <code>⌘]</code>/<code>⌘[</code> switching.</p>
-        </div>
-
-        <div class="feature">
-          <span class="idx">07</span>
-          <h3>Syncs across your Macs <span class="pro-tag">Pro</span></h3>
+          <h3>Syncs across your Macs</h3>
           <p>Optional iCloud sync carries your sessions and settings to your
           other Macs through your own private iCloud — credentials are
           never synced, so secrets stay in each Mac's Keychain.</p>
         </div>
 
         <div class="feature">
+          <span class="idx">07</span>
+          <h3>Snippets</h3>
+          <p>Save the commands you run over and over — <code>{host}</code>,
+          <code>{user}</code> and prompt-for-value variables included.
+          Paste or Run from the toolbar; syncs with your Macs.</p>
+        </div>
+
+        <div class="feature">
           <span class="idx">08</span>
-          <h3>Imports your ~/.ssh/config</h3>
-          <p>Every <code>Host</code> becomes a saved session — includes,
-          jump hosts, forwardings and identity files carried over,
-          with a preview before anything is written.</p>
+          <h3>Server monitoring</h3>
+          <p>Live CPU, memory, disk and load shown right in each session's
+          sidebar row — opt in per server, pick a poll interval from 15&nbsp;seconds
+          to 5&nbsp;minutes.</p>
         </div>
 
         <div class="feature">
@@ -300,90 +304,29 @@
 
         <div class="feature">
           <span class="idx">10</span>
-          <h3>Snippets</h3>
-          <p>Save the commands you run over and over — <code>{host}</code>,
-          <code>{user}</code> and prompt-for-value variables included.
-          Paste or Run from the toolbar; sync and JSON export are Pro extras.</p>
+          <h3>Terminal your way</h3>
+          <p>Colours and palette editor, cursor styles, bells and Dock alerts,
+          keyboard modes, 25 legacy charsets, light/dark/system themes —
+          and four app icons to pick from.</p>
         </div>
 
         <div class="feature">
           <span class="idx">11</span>
-          <h3>Server monitoring</h3>
-          <p>Live CPU, memory, disk and load shown right in each session's
-          sidebar row — opt in per server, pick a poll interval from 15&nbsp;seconds
-          to 5&nbsp;minutes.</p>
-        </div>
-
-        <div class="feature">
-          <span class="idx">12</span>
-          <h3>Session logging <span class="pro-tag">Pro</span></h3>
+          <h3>Session logging</h3>
           <p>Record printable output, everything, protocol packets or raw
           data — with timestamped filename placeholders and
           append/overwrite/ask control.</p>
         </div>
 
         <div class="feature">
-          <span class="idx">13</span>
-          <h3>Terminal your way</h3>
-          <p>Colours and palette editor, cursor styles, bells and Dock alerts,
-          keyboard modes, 27 charsets, light/dark/system themes —
-          and four app icons to pick from.</p>
-        </div>
-
-        <div class="feature">
-          <span class="idx">14</span>
-          <h3>Tags &amp; notes</h3>
-          <p>Tag sessions by what they do — chips show under each host in the
-          sidebar and search matches them. A private note per server keeps
-          the details worth remembering.</p>
+          <span class="idx">12</span>
+          <h3>Imports your ~/.ssh/config</h3>
+          <p>Every <code>Host</code> becomes a saved session — includes,
+          jump hosts, forwardings and identity files carried over,
+          with a preview before anything is written.</p>
         </div>
 
       </div>
-
-      <p class="feature-note">ssh-agent, GSSAPI, X11 forwarding, local-command
-      proxies and the local shell are direct-download only — the App Store
-      build's sandbox can't run them.</p>
-    </div>
-  </section>
-
-  <!-- PRO -->
-  <section id="pro" class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <h2 class="section-title">Free for the everyday.<br>Pro for the heavy lifting.</h2>
-        <p class="section-sub">No account, no expiring trial — the free tier is the real app, not a demo.</p>
-      </div>
-
-      <div class="pro-grid">
-        <div class="pro-card">
-          <p class="pro-tier">Free</p>
-          <ul class="pro-list">
-            <li>12 saved sessions, 4 connections at once</li>
-            <li>Every protocol, SFTP, monitoring, snippets</li>
-            <li>No time limit, no account needed</li>
-          </ul>
-          <p class="pro-cta"><a class="mono-link" href="#download">Download free →</a></p>
-          <p class="pro-fine">Included in both builds — upgrade to Pro
-          in-app any time, nothing to reinstall.</p>
-        </div>
-
-        <div class="pro-card pro-card-hi">
-          <p class="pro-tier">Pro</p>
-          <ul class="pro-list">
-            <li>Unlimited sessions and connections</li>
-            <li>Split view — two panes, one window</li>
-            <li>iCloud sync, session logging, snippet export</li>
-          </ul>
-          <p class="pro-price">$1.49<span>/mo</span> · $14.99<span>/yr</span> · $29.99<span>/lifetime</span></p>
-          <p class="pro-cta"><a class="mono-link" href="docs.html#pro">How buying works →</a></p>
-          <p class="pro-fine">Subscribe or buy lifetime — App Store purchases
-          cover the App Store build. License keys for the
-          direct download: coming soon.</p>
-        </div>
-      </div>
-
-      <p class="pro-note">Already using MaciTTY? Your install keeps Pro free —
-      nothing you use today is taken away.</p>
     </div>
   </section>
 
@@ -436,12 +379,12 @@
   <section id="download" class="cta">
     <div class="wrap cta-inner">
       <h2>Take it for a spin.</h2>
-      <p class="cta-sub">Grab the latest build — free tier included, universal, no account.</p>
+      <p class="cta-sub">Grab the latest build — free, universal, no account or subscription.</p>
       <div class="cta-cat">
         <svg class="cta-cat-svg" viewBox="0 0 40 21" aria-hidden="true"><use href="#pxcat-full"/></svg>
         <a class="btn btn-primary btn-big" href="MaciTTY-latest.dmg" data-goatcounter-click="download-dmg" data-goatcounter-title="DMG download — CTA">Download latest build</a>
       </div>
-      <p class="cta-note">v1.0 · signed and notarized by Apple — open the DMG and drag MaciTTY to Applications. The app checks for updates itself, so you'll always be on the latest build.</p>
+      <p class="cta-note">v0.9.1 · signed and notarized by Apple — open the DMG and drag MaciTTY to Applications. The app checks for updates itself, so you'll always be on the latest build.</p>
       <p class="cta-brew">or install via Homebrew — <code>brew install --cask knstntnkek/macitty/macitty</code></p>
     </div>
   </section>
