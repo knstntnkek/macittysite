@@ -31,8 +31,8 @@ Snippets are templates. Two kinds of placeholders:
 - `{{name}}` — required; Run stays disabled until it's filled
 - `{{name?}}` — optional; can be left empty
 
-So `ping -c 4 {{target}}` pastes your current host's user into the text but
-asks for `target` each time.
+So `ping -c 4 {{target}}` asks for `target` each time, then sends the line —
+while `whoami` text like `ssh {user}@{host}` fills itself from the session.
 
 ## Managing snippets
 

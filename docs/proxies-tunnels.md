@@ -50,6 +50,7 @@ with the connection and live as long as it does.
 - **X11 forwarding**
 - **GSSAPI credential forwarding** — delegate your Kerberos ticket
 
-Keepalives live on the Connection pane: the app-level **keepalive interval**
-sends in-band pings on a schedule, and **TCP keepalives** work below the
-protocol — either helps connections that idle through NATs or firewalls.
+Two keepalive kinds keep idle connections alive through NATs and firewalls:
+**Seconds between keepalives** on the Session pane (in-band pings on a
+schedule) and **TCP keepalives** on the Connection pane (below the
+protocol).

@@ -50,8 +50,8 @@ hops.
 For servers you use more than once, save a session instead:
 
 1. Press `⌘N` (or **File → New Session**).
-2. Fill in the host, port and username on the **Connection** pane.
-3. Pick your authentication on the **SSH** pane — see
+2. Fill in the host, port and username on the **Session** pane.
+3. Pick your authentication on the **Authentication** pane — see
    [Authentication](authentication.md).
 4. Give the session a name and, optionally, a folder and tags.
 5. Press `⌘↩` or click **Connect**.

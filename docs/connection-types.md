@@ -1,9 +1,9 @@
 # Connection types
 
-Each session's **Connection** pane chooses the protocol and the target.
+Each session's **Session** pane chooses the protocol and the target.
 Connection types are set per session — pick one when creating it.
 
-![The connection settings pane](img/connection-pane.png)
+![The Session settings pane](img/connection-pane.png)
 
 ## SSH
 

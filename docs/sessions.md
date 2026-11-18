@@ -79,6 +79,13 @@ your OpenSSH config and turns every `Host` into a saved session:
 
 ![The SSH config import preview](img/sessions-import.png)
 
+## Run a command on connect
+
+The Session pane's **Command to run after connecting** sends a command as
+soon as the session opens — `cd /srv/app`, `tail -f app.log`, a jump to
+your working directory. For longer sequences, [snippets](snippets.md) can
+be run on demand from the toolbar instead.
+
 ## Automatic reconnect
 
 When a connection *drops* — Wi-Fi blip, laptop sleep, server restart —

@@ -1,6 +1,7 @@
 # Authentication
 
-The **SSH** pane of a session's settings controls how you prove who you are.
+The **Authentication** pane of a session's settings controls how you prove
+who you are.
 MaciTTY supports every common way in:
 
 | Method | What to set |
@@ -23,7 +24,8 @@ in session files, and are never included in [iCloud sync](privacy.md#icloud-sync
 
 ## Public keys
 
-Set **Private key file** on the SSH pane to a key in `~/.ssh` (or anywhere).
+Set **Private key file** on the Authentication pane to a key in `~/.ssh`
+(or anywhere).
 If your key has a passphrase, it's asked for when needed — and can likewise
 be saved to the Keychain. `ssh-agent` is consulted automatically, so keys
 already loaded with `ssh-add` just work.
