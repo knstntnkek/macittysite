@@ -68,8 +68,29 @@
 
       <div class="release">
         <div class="release-head">
-          <h2>1.0</h2>
+          <h2>1.1</h2>
           <span class="release-date">November 2026 · latest</span>
+        </div>
+        <ul class="release-list">
+          <li><strong>SSH Keys manager</strong> — a full key tool built in:
+          generate pairs in the app (Ed25519 through RSA-4096), import your
+          existing OpenSSH or <code>.ppk</code> keys, and keep them all in
+          one place — passphrases in the Keychain, keys never synced off
+          your Mac.</li>
+          <li><strong>Install on Server</strong> — push a key's public half
+          to <code>authorized_keys</code> over a verified connection, see
+          where every key was installed, and remove it again just as easily.
+          No more <code>ssh-copy-id</code> by hand.</li>
+          <li><strong>Managed keys in the editor</strong> — pick a managed
+          key right in a session's Private key file field; deleting a key
+          sweeps it out of the sessions that used it.</li>
+        </ul>
+      </div>
+
+      <div class="release">
+        <div class="release-head">
+          <h2>1.0</h2>
+          <span class="release-date">November 2026</span>
         </div>
         <ul class="release-list">
           <li><strong>Split view</strong> — two terminals side by side, or a

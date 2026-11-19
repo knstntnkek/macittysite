@@ -30,6 +30,23 @@ If your key has a passphrase, it's asked for when needed — and can likewise
 be saved to the Keychain. `ssh-agent` is consulted automatically, so keys
 already loaded with `ssh-add` just work.
 
+## Managing keys
+
+The **SSH Keys** button in the sidebar toolbar opens the key manager —
+generate a pair, import an existing one, and each key gets **Copy public
+key**, **Install on Server**, **Remove from Server**, **Export** and
+**Delete** actions.
+
+- **Generate** — Ed25519 by default; Ed448, ECDSA and RSA in the usual
+  sizes
+- **Import** — OpenSSH and `.ppk` files; passphrases can be saved to the
+  Keychain like any other secret
+- **Install on Server** — adds the public half to `authorized_keys` and
+  records where each key was installed (verified installs, not a live
+  check); **Remove from Server** takes it back off
+- Managed keys live on this Mac and are never synced — the session
+  editor's **Private key file** field offers them directly
+
 ## Host key verification
 
 First connection to a host shows its key fingerprint for confirmation. Known
