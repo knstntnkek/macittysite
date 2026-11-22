@@ -28,7 +28,7 @@ fields the chosen type needs.
 For the common "connect through a bastion" case, pick an SSH-to-proxy type —
 then the **jump host picker** lets you choose any *saved session* as the hop
 instead of retyping its address and credentials — equivalent to OpenSSH's
-`ProxyJump`. Sessions [imported from `~/.ssh/config`](sessions.md#importing-sshconfig)
+`ProxyJump`. Sessions [imported from `~/.ssh/config`](sessions.md#importing-ssh-config)
 with `ProxyJump` land here automatically.
 
 ## Port forwarding
