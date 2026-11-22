@@ -61,57 +61,63 @@
   setTimeout(session, 6000 + Math.random() * 6000, pick());
 })();
 
-// Screenshot slideshow inside the app-window frame
+// Screenshot showcase: tabs + crossfade, autoplay until the user picks a tab
 (function () {
-  const box = document.getElementById('slideshow');
+  const box = document.getElementById('showcase');
   if (!box) return;
-  const track = box.querySelector('.slides');
-  const slides = track.children;
-  const caption = document.getElementById('slide-caption');
-  const dotsBox = document.getElementById('slide-dots');
-  const CAPTIONS = [
-    'All your servers in one place, grouped, tagged and monitored',
-    'Search — matches names, hosts and tags',
-    'Terminal — a live SSH session, embedded in the main window',
-    'Files — dual-pane SFTP with a history of every operation and Finder drag\'n\'drop',
-  ];
-  let current = 0, timer = null;
+  const tabs = [...box.querySelectorAll('.sc-tab')];
+  const shots = [...box.querySelectorAll('.sc-shot')];
+  const panel = document.getElementById('sc-panel');
+  const desc = document.getElementById('sc-desc');
+  const DUR = 6000;
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let current = 0, timer = null, auto = !still, hovered = false;
+  box.style.setProperty('--sc-dur', DUR + 'ms');
 
-  const dots = [...slides].map((_, i) => {
-    const d = document.createElement('button');
-    d.className = 'car-dot';
-    d.setAttribute('aria-label', 'Screenshot ' + (i + 1));
-    d.addEventListener('click', () => { go(i); restart(); });
-    dotsBox.appendChild(d);
-    return d;
+  function show(i, focus) {
+    current = (i + tabs.length) % tabs.length;
+    tabs.forEach((t, k) => {
+      const on = k === current;
+      t.setAttribute('aria-selected', on);
+      t.tabIndex = on ? 0 : -1;
+    });
+    shots.forEach((s, k) => s.classList.toggle('on', k === current));
+    panel.setAttribute('aria-labelledby', tabs[current].id);
+    desc.innerHTML = shots[current].dataset.desc;
+    if (focus) tabs[current].focus();
+    const t = tabs[current];
+    const row = t.parentElement;
+    if (t.offsetLeft < row.scrollLeft || t.offsetLeft + t.offsetWidth > row.scrollLeft + row.clientWidth)
+      row.scrollTo({ left: t.offsetLeft - 8, behavior: still ? 'auto' : 'smooth' });
+    schedule();
+  }
+  function schedule() {
+    clearTimeout(timer);
+    box.classList.remove('playing');
+    if (!auto) return;
+    void box.offsetWidth; // restart the progress animation
+    box.classList.add('playing');
+    if (!hovered && !document.hidden) timer = setTimeout(() => show(current + 1), DUR);
+  }
+  function stopAuto() { auto = false; schedule(); }
+
+  tabs.forEach((t, i) => t.addEventListener('click', () => { stopAuto(); show(i); }));
+  box.querySelector('.sc-tabs').addEventListener('keydown', (e) => {
+    const k = { ArrowRight: current + 1, ArrowLeft: current - 1, Home: 0, End: tabs.length - 1 }[e.key];
+    if (k === undefined) return;
+    e.preventDefault();
+    stopAuto();
+    show(k, true);
   });
-
-  function go(i) {
-    current = (i + slides.length) % slides.length;
-    track.scrollTo({ left: current * track.clientWidth, behavior: 'smooth' });
+  function pause(on) {
+    hovered = on;
+    box.classList.toggle('paused', on);
+    if (on) clearTimeout(timer); else schedule();
   }
-  function sync() {
-    current = Math.round(track.scrollLeft / track.clientWidth);
-    dots.forEach((d, i) => d.classList.toggle('on', i === current));
-    if (caption) caption.textContent = CAPTIONS[current] || '';
-  }
-  function restart() {
-    clearInterval(timer);
-    timer = setInterval(() => go(current + 1), 5000);
-  }
-
-  box.querySelector('.prev').addEventListener('click', () => { go(current - 1); restart(); });
-  box.querySelector('.next').addEventListener('click', () => { go(current + 1); restart(); });
-  track.addEventListener('scroll', sync, { passive: true });
-  window.addEventListener('resize', sync);
-  box.addEventListener('pointerenter', () => clearInterval(timer));
-  box.addEventListener('pointerleave', restart);
-  document.addEventListener('keydown', (e) => {
-    const r = box.getBoundingClientRect();
-    if (r.top > innerHeight || r.bottom < 0) return;
-    if (e.key === 'ArrowLeft') { go(current - 1); restart(); }
-    if (e.key === 'ArrowRight') { go(current + 1); restart(); }
-  });
-  sync();
-  restart();
+  box.addEventListener('pointerenter', () => pause(true));
+  box.addEventListener('pointerleave', () => pause(false));
+  box.addEventListener('focusin', () => pause(true));
+  box.addEventListener('focusout', (e) => { if (!box.contains(e.relatedTarget)) pause(false); });
+  document.addEventListener('visibilitychange', () => document.hidden ? clearTimeout(timer) : schedule());
+  show(0);
 })();
