@@ -189,27 +189,26 @@
   <!-- SCREENSHOTS -->
   <section id="screenshots" class="section">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head sc-head">
         <h2 class="section-title">See it in action</h2>
         <p class="section-sub">Sessions, terminal and file transfer — all in one window.</p>
       </div>
 
-      <div class="app-window" id="slideshow">
-        <div class="title-bar">
-          <span class="tl-dot"></span><span class="tl-dot"></span><span class="tl-dot"></span>
-          <span class="window-title">MaciTTY — ubuntu VM · ssh</span>
+      <div class="showcase" id="showcase">
+        <div class="sc-tabs" role="tablist" aria-label="App screenshots">
+          <button class="sc-tab" role="tab" id="sc-tab-live" aria-controls="sc-panel" aria-selected="true" tabindex="0"><span>Library &amp; monitoring</span><i class="sc-progress" aria-hidden="true"></i></button>
+          <button class="sc-tab" role="tab" id="sc-tab-search" aria-controls="sc-panel" aria-selected="false" tabindex="-1"><span>Search &amp; tags</span><i class="sc-progress" aria-hidden="true"></i></button>
+          <button class="sc-tab" role="tab" id="sc-tab-terminal" aria-controls="sc-panel" aria-selected="false" tabindex="-1"><span>Terminal</span><i class="sc-progress" aria-hidden="true"></i></button>
+          <button class="sc-tab" role="tab" id="sc-tab-files" aria-controls="sc-panel" aria-selected="false" tabindex="-1"><span>Files (SFTP)</span><i class="sc-progress" aria-hidden="true"></i></button>
         </div>
-        <div class="slides">
-          <figure class="slide"><img src="shot-live.png" alt="Session library with folders, tagged sessions and live CPU, memory and disk metrics in the sidebar" width="1024" height="680"></figure>
-          <figure class="slide"><img src="shot-settings.png" alt="Session search matching a tag, with the session editor showing tags, notes and monitoring settings" width="1024" height="680"></figure>
-          <figure class="slide"><img src="shot-terminal.png" alt="Embedded terminal showing a live SSH session" width="1024" height="680"></figure>
-          <figure class="slide"><img src="shot-files.png" alt="Dual-pane SFTP browser with a transfer history strip at the bottom" width="1024" height="680"></figure>
+        <p class="sc-desc" id="sc-desc" aria-live="polite">All your servers in one place — grouped in folders, tagged, with live CPU, memory and disk.</p>
+        <div class="sc-stage" id="sc-panel" role="tabpanel" aria-labelledby="sc-tab-live">
+          <img class="sc-shot on" src="shot-live.png" alt="Session library with folders, tagged sessions and live CPU, memory and disk metrics in the sidebar" data-desc="All your servers in one place — grouped in folders, tagged, with live CPU, memory and disk." width="1024" height="680">
+          <img class="sc-shot" aria-hidden="true" src="shot-settings.png" alt="Session search matching a tag, with the session editor showing tags, notes and monitoring settings" data-desc="Search matches names, hosts and tags; every session keeps its own notes and settings." width="1024" height="680" loading="lazy" decoding="async">
+          <img class="sc-shot" aria-hidden="true" src="shot-terminal.png" alt="Embedded terminal showing a live SSH session" data-desc="A fast native terminal, embedded right next to your library." width="1024" height="680" loading="lazy" decoding="async">
+          <img class="sc-shot" aria-hidden="true" src="shot-files.png" alt="Dual-pane SFTP browser with a transfer history strip at the bottom" data-desc="Dual-pane SFTP with a history of every operation and Finder drag &amp; drop." width="1024" height="680" loading="lazy" decoding="async">
         </div>
-        <button class="car-btn prev" aria-label="Previous screenshot"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M15 4l-8 8 8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-        <button class="car-btn next" aria-label="Next screenshot"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       </div>
-      <p class="caption" id="slide-caption"></p>
-      <div class="car-dots" id="slide-dots"></div>
     </div>
   </section>
 
