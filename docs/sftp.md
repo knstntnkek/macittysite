@@ -1,7 +1,10 @@
 # File transfer (SFTP)
 
-Every SSH session has a **Files** tab: a dual-pane SFTP browser riding the
-same connection — no second login, no second app.
+Every SSH session has a **Files** tab: a dual-pane SFTP browser in the same
+window — no second app. Files opens its own SFTP connection to the server
+with the session's settings and saved credentials, so a saved password or
+key signs it in without asking; if nothing is saved, you're prompted again.
+Closing the session also closes its Files tab.
 
 ![The dual-pane file browser](img/sftp-panes.png)
 

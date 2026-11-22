@@ -72,7 +72,8 @@ Everything lives in one window:
   connections, search, tags and (optionally) per-server metrics.
 - **Terminal** — live sessions open embedded in the main window; switch
   between them instantly from the sidebar.
-- **Files** — an SFTP browser on the same connection, side by side with
+- **Files** — an SFTP browser for the same server (its own SFTP connection,
+  signed in with the session's saved credentials), side by side with
   your local files. See [File transfer](sftp.md).
 
 ## Updates
