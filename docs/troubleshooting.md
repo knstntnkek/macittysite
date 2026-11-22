@@ -55,10 +55,11 @@ and usually names the failure directly. Include it when
 
 ## A license key won't activate / Pro isn't recognized
 
-- Direct download: license keys are coming soon — when they land, paste
-  the whole key into **Settings → MaciTTY Pro → License key** and click
-  **Unlock**; keys will unlock the
-  website/Homebrew build only.
+- Direct download: paste the whole key you received from
+  [support@macitty.app](mailto:support@macitty.app) into
+  **Settings → MaciTTY Pro → License key** and click **Unlock**; keys
+  unlock the website/Homebrew build only. If it still won't activate,
+  email the same address.
 - App Store version: use **Restore Purchases** in the paywall or in
   Settings — purchases are Apple's, and can't unlock the direct download.
 - Purchase questions and channel mix-ups:

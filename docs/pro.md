@@ -3,7 +3,8 @@
 MaciTTY is free for everyday use — saved sessions, SSH/SFTP, serial,
 snippets, monitoring, remote editing. Pro lifts the library caps and
 unlocks the extras — subscribe or buy lifetime in the App Store version;
-a lifetime license for the direct download is coming soon.
+for the direct download, get a lifetime license key by emailing
+[support@macitty.app](mailto:support@macitty.app).
 
 ## What Pro unlocks
 
@@ -17,7 +18,8 @@ a lifetime license for the direct download is coming soon.
 - **Snippet export** — share snippet libraries as files
 
 Plans: monthly, yearly or lifetime on the App Store. A one-time
-lifetime license key for the direct download is **coming soon**.
+lifetime license key for the direct download is available from
+[support@macitty.app](mailto:support@macitty.app).
 
 ## Two versions, two purchase channels
 
@@ -28,7 +30,7 @@ direct download).
 
 A Pro purchase covers one channel: App Store purchases (subscription
 or lifetime) unlock the App Store version; license keys for the
-direct download are coming soon and will cover that build. That's an
+direct download (from [support@macitty.app](mailto:support@macitty.app)) cover that build. That's an
 Apple rule — App Store apps can't unlock features bought elsewhere.
 
 Your data isn't locked in either way:
