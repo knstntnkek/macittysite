@@ -26,7 +26,8 @@ brew install --cask knstntnkek/macitty/macitty
 ```
 
 **Mac App Store:** the sandboxed build — the direct download keeps a few
-power features the sandbox forbids (local shell, agent forwarding, X11).
+power features the sandbox forbids (local shell sessions, local proxy
+commands) and its own updater.
 A Pro purchase covers one channel; see
 [Pro &amp; licensing](pro.md#two-versions-two-purchase-channels) for the details.
 
@@ -41,15 +42,16 @@ nothing you have is taken away.
 ## Your first connection
 
 The fastest way in is the **quick connect** field at the top of the sidebar —
-type a host (`user@server.example.com` or just a hostname), press Return, and
-you're connected. Quick-connect sessions aren't saved; they're for one-off
+type a host (`server.example.com`, `user@server.example.com` or
+`user@server.example.com:2222`; an `ssh://` prefix forces SSH), press Return,
+and you're connected. Quick-connect sessions aren't saved; they're for one-off
 hops.
 
 ![Quick connect in the sidebar](img/getting-started-quick-connect.png)
 
 For servers you use more than once, save a session instead:
 
-1. Press `⌘N` (or **File → New Session**).
+1. Press `⌘N` (or **File → New Session**, or the sidebar's **+** button).
 2. Fill in the host, port and username on the **Session** pane.
 3. Pick your authentication on the **Authentication** pane — see
    [Authentication](authentication.md).
@@ -75,7 +77,9 @@ Everything lives in one window:
 
 ## Updates
 
-MaciTTY checks for updates on a schedule — **weekly** by default. Change the
-frequency (daily / weekly / monthly / never) or trigger a manual check from
-**MaciTTY → Settings → General → Check Now**. Installing an update shows its
-progress and restarts the app for you.
+The direct download checks for updates on a schedule — **weekly** by
+default. In **MaciTTY → Settings → Updates**, choose the policy (**Check
+only**, the default; **Check and install**; or **Do not check**), the
+frequency (daily / weekly / monthly / never), or trigger a manual check with
+**Check Now**. Installing an update shows its progress and restarts the app
+for you. The App Store version updates through the App Store.

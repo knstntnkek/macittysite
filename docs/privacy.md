@@ -9,14 +9,19 @@ vendor cloud, no account, no telemetry, nothing to breach.
   local storage under your user account
 - **Passwords and credentials** — in the macOS **login Keychain**, managed
   by the system, encrypted at rest — never in session files
-- **Known host keys** — stored locally, like `~/.ssh/known_hosts`
+- **Known host keys** — stored locally in MaciTTY's own data folder
+  (`~/Library/Application Support/MaciTTY/putty/`), separate from
+  `~/.ssh/known_hosts`
+- **SSH keys** made or imported in the [key manager](authentication.md#managing-keys)
+  — stored on this Mac only, never synced
 
 ## App lock
 
 Lock the whole app behind **Touch ID or your login password** — `⌃⌘L`
-(**MaciTTY → Lock MaciTTY**) or automatically after idle. While locked,
-windows are hidden and the app shields itself from screen capture. Enable
-it in Settings; it's optional.
+(**MaciTTY → Lock MaciTTY**), when MaciTTY launches, when the Mac sleeps, or
+automatically after 5, 15, 30 or 60 idle minutes. While locked, windows are
+hidden and the app shields itself from screen capture; sessions stay
+connected. Enable it in **Settings → App Lock**; it's optional.
 
 ![The lock screen](img/privacy-lock.png)
 

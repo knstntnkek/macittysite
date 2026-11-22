@@ -4,9 +4,9 @@
 
 | Shortcut | Action |
 |---|---|
-| `⌘N` | New connection |
+| `⌘N` | New session (in the current folder) |
 | `⌘⇧L` | Show saved sessions |
-| `⌘D` | Duplicate selected session |
+| `⌘D` | Duplicate Session — open a second connection to the focused live session |
 | `⌘K` | Focus the sidebar search |
 | `⌘↩` | Connect (or switch to the live terminal) |
 
@@ -19,13 +19,14 @@
 | `⌘G` | Next match |
 | `⌘⇧G` | Previous match |
 | `⌘E` | Use selection for find |
+| `⌘⇧V` | Open the snippets popover |
 
 ## Panes (split view)
 
 | Shortcut | Action |
 |---|---|
-| `⌘]` | Focus the other pane |
-| `⌘[` | Focus the other pane back |
+| `⌘]` | Focus next pane |
+| `⌘[` | Focus previous pane |
 
 ## App
 

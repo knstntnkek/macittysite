@@ -49,12 +49,12 @@ Settings on the **Serial** pane:
 
 | Setting | Notes |
 |---|---|
-| Serial line | The device path — typically `/dev/cu.usbserial*` or `/dev/cu.usbmodem*` for USB adapters |
+| Serial line | Pick the port from the list — typically `/dev/cu.usbserial*` or `/dev/cu.usbmodem*` for USB adapters |
 | Speed (baud) | `9600` by default; common values `9600`–`115200` |
 | Data bits | Usually `8` |
-| Stop bits | Usually `1` |
-| Parity | None / odd / even — match the device |
-| Flow control | None / XON-XOFF / RTS-CTS |
+| Stop bits | `1`, `1.5` or `2` — usually `1` |
+| Parity | None / odd / even / mark / space — match the device |
+| Flow control | None / XON-XOFF (default) / RTS-CTS / DSR-DTR |
 
 > **Tip** — plug in the adapter, then run `ls /dev/cu.*` in a shell to find
 > the exact device name before creating the session.
@@ -69,7 +69,8 @@ same sidebar, same settings model, no host required.
 - **Shell** — defaults to your `$SHELL` (falling back to `/bin/zsh`, run as
   a login shell)
 - **Start directory** — defaults to your home folder
-- **Command on start** — run something instead of the interactive shell
+- **Command to run after connecting** (Session pane) — typed into the shell
+  once it's up, e.g. `cd ~/project`
 
 Local sessions don't [auto-reconnect](sessions.md#automatic-reconnect) — a
 dead shell shouldn't loop-respawn; the "Shell exited" banner restarts it on

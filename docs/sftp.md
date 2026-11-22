@@ -21,7 +21,7 @@ same connection — no second login, no second app.
   and remote rows straight out to Finder, Desktop or Mail — the download
   runs through the normal transfer machinery with progress
 - Recursive transfers — whole directory trees copy with progress
-- Overwriting an existing file asks **Replace / Skip / Cancel** — per file
+- Overwriting existing files asks **Replace / Skip Existing / Cancel**
 
 ## Editing remote files
 
