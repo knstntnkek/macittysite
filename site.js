@@ -81,7 +81,7 @@
       t.setAttribute('aria-selected', on);
       t.tabIndex = on ? 0 : -1;
     });
-    shots.forEach((s, k) => s.classList.toggle('on', k === current));
+    shots.forEach((s, k) => { s.classList.toggle('on', k === current); s.toggleAttribute('aria-hidden', k !== current); });
     panel.setAttribute('aria-labelledby', tabs[current].id);
     desc.innerHTML = shots[current].dataset.desc;
     if (focus) tabs[current].focus();
