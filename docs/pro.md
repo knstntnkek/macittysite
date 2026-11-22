@@ -23,7 +23,7 @@ lifetime license key for the direct download is **coming soon**.
 
 MaciTTY ships two builds: the **direct download** from this site and
 the **Mac App Store** version (sandboxed — a few power features like
-local-shell sessions and agent forwarding stay exclusive to the
+local-shell sessions and local proxy commands stay exclusive to the
 direct download).
 
 A Pro purchase covers one channel: App Store purchases (subscription
@@ -34,7 +34,7 @@ Apple rule — App Store apps can't unlock features bought elsewhere.
 Your data isn't locked in either way:
 
 - If iCloud sync was on in the version you're leaving, open
-  **Settings → iCloud Sync → Restore from iCloud** in the new install —
+  **Settings → iCloud Sync → Restore from iCloud…** in the new install —
   a one-time pull that doesn't require Pro.
 - Saved passwords live in your Mac's Keychain, which both versions
   share.

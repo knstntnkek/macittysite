@@ -38,15 +38,17 @@ next prompt.
 
 ## Where does MaciTTY keep its data?
 
-- Sessions, tags, notes, snippets, settings: the app's container under
-  `~/Library/Application Support`
+- Sessions, Default Settings, known host keys and managed SSH keys:
+  `~/Library/Application Support/MaciTTY/` (in the App Store version, the
+  same folder inside the app's sandbox container)
+- Snippets and app preferences: MaciTTY's preferences (`app.macitty.MaciTTY`)
 - Passwords: the login Keychain (open **Keychain Access** to inspect)
 - Session logs: wherever you point the log path on the
   [Logging pane](logging.md)
 
 ## A connection fails or misbehaves
 
-Right-click the live connection → **Event Log**. It records each step of
+Open the pane toolbar's **Session** menu → **Event Log**. It records each step of
 the connection — proxy negotiation, auth method attempts, key exchange —
 and usually names the failure directly. Include it when
 [reporting a bug](#report-a-bug-or-request-a-feature).
@@ -54,7 +56,8 @@ and usually names the failure directly. Include it when
 ## A license key won't activate / Pro isn't recognized
 
 - Direct download: license keys are coming soon — when they land, paste
-  the whole key in the app's Pro panel; keys will unlock the
+  the whole key into **Settings → MaciTTY Pro → License key** and click
+  **Unlock**; keys will unlock the
   website/Homebrew build only.
 - App Store version: use **Restore Purchases** in the paywall or in
   Settings — purchases are Apple's, and can't unlock the direct download.

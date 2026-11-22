@@ -7,7 +7,7 @@ one click away in the toolbar popover and manageable in the sidebar.
 
 ## Using a snippet
 
-Click the snippets button in the toolbar to open the popover:
+Click **Snippets** in the pane toolbar (or press `⌘⇧V`) to open the popover:
 
 - **Click a row** — inserts the text at the prompt *without* Enter, so you
   can review or complete it first
@@ -36,8 +36,8 @@ while `whoami` text like `ssh {user}@{host}` fills itself from the session.
 
 ## Managing snippets
 
-The sidebar's snippets section lists them all; add, edit, reorder or delete
-there. A few **example snippets** ship with the app — they double as a demo
+The **Snippets** button beside the sidebar search opens the snippets
+manager; add, edit, reorder or delete there. A few **example snippets** ship with the app — they double as a demo
 of the variable syntax and can be deleted like any other.
 
 ## Sharing &amp; sync

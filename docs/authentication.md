@@ -37,15 +37,22 @@ generate a pair, import an existing one, and each key gets **Copy public
 key**, **Install on Server**, **Remove from Server**, **Export** and
 **Delete** actions.
 
-- **Generate** — Ed25519 by default; Ed448, ECDSA and RSA in the usual
-  sizes
-- **Import** — OpenSSH and `.ppk` files; passphrases can be saved to the
-  Keychain like any other secret
-- **Install on Server** — adds the public half to `authorized_keys` and
+- **Generate** — Ed25519 by default; Ed448, ECDSA P-256/P-384/P-521 and
+  RSA 2048/3072/4096. Keys are stored in OpenSSH format, or PuTTY PPK v3 if
+  you pick it
+- **Import** — OpenSSH, PuTTY `.ppk` and ssh.com keys, converted into
+  MaciTTY's key store; passphrases can be saved to the Keychain like any
+  other secret
+- **Export** — as an OpenSSH or PPK private key, or an RFC 4716 public key
+- **Install on Server** — logs in normally and appends the public half to
+  `~/.ssh/authorized_keys` (existing keys are kept), and
   records where each key was installed (verified installs, not a live
   check); **Remove from Server** takes it back off
 - Managed keys live on this Mac and are never synced — the session
-  editor's **Private key file** field offers them directly
+  editor's **Private key file** field offers them directly, next to
+  **Choose File…** and **Generate…**
+- Deleting a key that sessions use warns first; those sessions fall back to
+  password login
 
 ## Host key verification
 

@@ -12,7 +12,7 @@ The Proxy pane's **Proxy type** setting:
 | SOCKS 4 / SOCKS 5 | Classic SOCKS proxies |
 | HTTP CONNECT | Corporate web proxies that allow CONNECT |
 | Telnet | Proxies spoken to with a Telnet command |
-| Local command | Any local program as transport — e.g. `nc`, `corkscrew` |
+| Local command | Any local program as transport — e.g. `nc`, `corkscrew` (direct download only — the App Store sandbox can't spawn it) |
 | SSH to proxy + port forwarding | SSH jump host (like `ProxyJump`) |
 | SSH to proxy + command | Jump host running a command |
 | SSH to proxy + subsystem | Jump host running a subsystem |
@@ -28,7 +28,7 @@ fields the chosen type needs.
 For the common "connect through a bastion" case, pick an SSH-to-proxy type —
 then the **jump host picker** lets you choose any *saved session* as the hop
 instead of retyping its address and credentials — equivalent to OpenSSH's
-`ProxyJump`. Sessions [imported from `~/.ssh/config`](sessions.md#importing-sshconfig)
+`ProxyJump`. Sessions [imported from `~/.ssh/config`](sessions.md#importing-ssh-config)
 with `ProxyJump` land here automatically.
 
 ## Port forwarding
@@ -44,11 +44,15 @@ with the connection and live as long as it does.
 
 ![The port-forwarding table](img/proxies-tunnels.png)
 
-## Also on this pane
+## Other forwarding
 
-- **Agent forwarding** — expose your local `ssh-agent` to the remote
-- **X11 forwarding**
-- **GSSAPI credential forwarding** — delegate your Kerberos ticket
+Each lives on its own settings pane:
+
+- **Agent forwarding** — **Allow agent forwarding** on the Authentication
+  pane exposes your local `ssh-agent` to the remote
+- **X11 forwarding** — the **X11** pane
+- **GSSAPI credential forwarding** — the **GSSAPI** pane; delegates your
+  Kerberos ticket
 
 Two keepalive kinds keep idle connections alive through NATs and firewalls:
 **Seconds between keepalives** on the Session pane (in-band pings on a

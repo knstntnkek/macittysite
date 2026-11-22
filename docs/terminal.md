@@ -10,7 +10,9 @@ look and behave.
   app's green palette
 - **Colours &amp; palette editor** — ANSI palette and terminal colors,
   editable per session or for everything via Default Settings
-- **Cursor** — block / underline / bar, blinking or steady
+- **Font, size and window** — font, font size (13 pt default), columns ×
+  rows (80 × 24) on the Window pane
+- **Cursor** — block / underline / vertical line, blinking or steady
 
 ![The palette editor](img/terminal-palette.png)
 
@@ -27,8 +29,10 @@ two terminals, or a terminal and its files.
 
 ## Bell &amp; alerts
 
-Control what a terminal bell does: audible bell, visual flash, and **Dock
-alerts** — bounce the icon when a background session beeps or finishes.
+The **Bell** pane controls what a terminal bell does: nothing, the system
+alert sound, or a visual flash of the window — plus a **Dock** indication
+that flashes the icon briefly or bounces it until you switch to MaciTTY. A
+bell that fires too often is temporarily silenced.
 
 ## Behaviour
 
@@ -40,14 +44,15 @@ alerts** — bounce the icon when a background session beeps or finishes.
 
 ## Keyboard &amp; charset
 
-- **Keyboard modes** — function-key and keypad modes for applications that
-  distinguish them
-- **Character sets** — **27 charsets**: UTF-8 plus the legacy encodings
+- **Keyboard modes** — Backspace, Home/End, function-key and keypad modes
+  for applications that distinguish them
+- **Option as Meta** — make the Option key send an ESC prefix
+- **Character sets** — **26 charsets**: UTF-8 plus the legacy encodings
   for gear and systems that predate Unicode
 
 ## App icon
 
-Four alternate app icons to pick from in Settings — including variants for
-light and dark docks.
+Four app icons to pick from in **Settings → Appearance** — Matrix, Monitor,
+Outline and Peek.
 
 ![The app icon picker](img/terminal-icons.png)
